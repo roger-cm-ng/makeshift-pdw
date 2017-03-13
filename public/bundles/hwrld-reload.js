@@ -41581,7 +41581,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!../~/cssnext-loader!../~/sass-loader!../~/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./core.scss */ 202);
+	var content = __webpack_require__(/*! !../~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!../~/cssnext-loader!../~/sass-loader!../~/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./core.scss */ 202);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../~/style-loader/addStyles.js */ 204)(content, {});
@@ -41590,8 +41590,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../node_modules/cssnext-loader/index.js!../node_modules/sass-loader/index.js!../node_modules/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./core.scss", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../node_modules/cssnext-loader/index.js!../node_modules/sass-loader/index.js!../node_modules/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./core.scss");
+			module.hot.accept("!!../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../node_modules/cssnext-loader/index.js!../node_modules/sass-loader/index.js!../node_modules/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./core.scss", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../node_modules/cssnext-loader/index.js!../node_modules/sass-loader/index.js!../node_modules/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./core.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41602,9 +41602,9 @@
 
 /***/ },
 /* 202 */
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!./~/cssnext-loader!./~/sass-loader!./~/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./styles/core.scss ***!
-  \*******************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!./~/cssnext-loader!./~/sass-loader!./~/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./styles/core.scss ***!
+  \******************************************************************************************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(/*! ../~/css-loader/lib/css-base.js */ 203)();
@@ -41696,7 +41696,7 @@
 			};
 		},
 		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 		}),
 		getHeadElement = memoize(function () {
 			return document.head || document.getElementsByTagName("head")[0];
@@ -41941,7 +41941,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !../../~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!../../~/cssnext-loader!../../~/sass-loader!../../~/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./reload.scss */ 206);
+	var content = __webpack_require__(/*! !../../~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!../../~/cssnext-loader!../../~/sass-loader!../../~/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./reload.scss */ 206);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 204)(content, {});
@@ -41950,8 +41950,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/cssnext-loader/index.js!../../node_modules/sass-loader/index.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./reload.scss", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/cssnext-loader/index.js!../../node_modules/sass-loader/index.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./reload.scss");
+			module.hot.accept("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/cssnext-loader/index.js!../../node_modules/sass-loader/index.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./reload.scss", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js?modules&localIdentName=[local]---[hash:base64:5]!../../node_modules/cssnext-loader/index.js!../../node_modules/sass-loader/index.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./reload.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41962,9 +41962,9 @@
 
 /***/ },
 /* 206 */
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!./~/cssnext-loader!./~/sass-loader!./~/string-replace-webpack-plugin/loader.js?id=6lh57540jkbd281pdbi83vunmi!./components/reload/reload.scss ***!
-  \********************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?modules&localIdentName=[local]---[hash:base64:5]!./~/cssnext-loader!./~/sass-loader!./~/string-replace-webpack-plugin/loader.js?id=8jhu3mnf001270mvcxizoajor!./components/reload/reload.scss ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 203)();
