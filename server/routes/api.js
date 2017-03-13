@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import camelcaseKeys from 'camelcase-keys';
+
 const Api = express.Router();
 Api.use(cors());
 
@@ -43,12 +45,11 @@ Api.get('/get-hw-rotate-banners', (req, res) => {
 Api.post('/flights', (req, res) => {
   res.json({
     status: 200,
-    data: {
-	"SearchResponse": {
-		"Currency": "AUD",
-		"NextSequenceId": 1,
-		"OneWayFaring": true,
-		"Results": {
+    data: camelcaseKeys({
+		"Result": {
+      "Currency": "AUD",
+  		"NextSequenceId": 1,
+  		"OneWayFaring": true,
 			"CTA": "details to get back to this selection",
 			"Count": 1,
 			"Trip": [
@@ -746,8 +747,7 @@ Api.post('/flights', (req, res) => {
 				}
 			]
 		}
-	}
-}
+  }, { deep: true })
   });
 });
 
