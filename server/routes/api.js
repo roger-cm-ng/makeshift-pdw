@@ -14,7 +14,7 @@ Api.get('/get-all', (req, res) => {
   });
 });
 
-Api.get('/get-hw-rotate-banners', (req, res) => {
+Api.post('/get-hw-rotate-banners', (req, res) => {
   res.json({
     status: 200,
     data: {
@@ -42,14 +42,14 @@ Api.get('/get-hw-rotate-banners', (req, res) => {
   });
 });
 
-Api.post('/flights', (req, res) => {
+Api.get('/flights', (req, res) => {
   res.json({
     status: 200,
     data: camelcaseKeys({
 		"Result": {
       "Currency": "AUD",
   		"NextSequenceId": 1,
-  		"OneWayFaring": true,
+  		"FareType": 'oneway',
 			"CTA": "details to get back to this selection",
 			"Count": 1,
 			"Trip": [
