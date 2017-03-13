@@ -58,4 +58,18 @@ Api.post('/flights-return', (req, res) => {
   });
 });
 
+Api.get('/get-flights-one-way', (req, res) => {
+  res.json({
+    status: 200,
+    data: camelcaseKeys(oneWayFare, { deep: true })
+  });
+});
+
+Api.get('/get-flights-return', (req, res) => {
+  res.json({
+    status: 200,
+    data: camelcaseKeys(returnFare, { deep: true })
+  });
+});
+
 export default Api;
