@@ -17,8 +17,8 @@
         "Sequence": 1
       }
     ],
-    "Legs": [
-      {
+    "Legs": {
+      "1": {
         "Id": 1,
         "Origin": "Sydney",
         "Destination": "Melbourne",
@@ -40,7 +40,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "2": {
         "Id": 2,
         "Origin": "Sydney",
         "Destination": "Melbourne",
@@ -62,7 +62,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "3": {
         "Id": 3,
         "Origin": "Sydney",
         "Destination": "Canberra",
@@ -84,7 +84,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "4": {
         "Id": 4,
         "Origin": "Canberra",
         "Destination": "Melbourne",
@@ -106,7 +106,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "5": {
         "Id": 5,
         "Origin": "Melbourne",
         "Destination": "Sydney",
@@ -128,7 +128,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "6": {
         "Id": 6,
         "Origin": "Melbourne",
         "Destination": "Sydney",
@@ -150,7 +150,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "7": {
         "Id": 7,
         "Origin": "Melbourne",
         "Destination": "Sydney",
@@ -172,7 +172,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "8": {
         "Id": 8,
         "Origin": "Melbourne",
         "Destination": "Sydney",
@@ -200,7 +200,7 @@
           "Name": "Canberra"
         }
       },
-      {
+      "9": {
         "Id": 9,
         "Origin": "Sydney",
         "Destination": "Adelaide",
@@ -222,7 +222,7 @@
           "Name": "Airbus 123"
         }
       },
-      {
+      "10": {
         "Id": 10,
         "Origin": "Adelaide",
         "Destination": "Melbourne",
@@ -244,57 +244,57 @@
           "Name": "Airbus 123"
         }
       }
-    ],
-    "Segments": [
-      {
+    },
+    "Segments": {
+      "s1": {
         "Id": "S1",
         "InfoSource": "Some Source",
         "Sequence": 0,
         "BaseLegIds": [1]
       },
-      {
+      "s2": {
         "Id": "S2",
         "InfoSource": "Some Source",
         "Sequence": 0,
         "BaseLegIds": [2]
       },
-      {
+      "s3": {
         "Id": "S3",
         "InfoSource": "Some Source",
         "Sequence": 0,
         "BaseLegIds": [3,4]
       },
-      {
+      "s4": {
         "Id": "S4",
         "InfoSource": "Some Source",
         "Sequence": 1,
         "BaseLegIds": [5]
       },
-      {
+      "s5": {
         "Id": "S5",
         "InfoSource": "Some Source",
         "Sequence": 1,
         "BaseLegIds": [6]
       },
-      {
+      "s6": {
         "Id": "S6",
         "InfoSource": "Some Source",
         "Sequence": 1,
         "BaseLegIds": [7]
       },
-      {
+      "s7": {
         "Id": "S7",
         "InfoSource": "Some Source",
         "Sequence": 1,
         "BaseLegIds": [8]
       },
-      {
+      "s8": {
         "Id": "S8",
         "InfoSource": "Some Source",
         "Sequence": 0,
         "BaseLegIds": [9,10]
       }
-    ],
+    },
     "FareOptions": [
       {
         "CTA": "details to get back to this selection",
@@ -302,9 +302,10 @@
         "FareType": "OneWay",
         "ToatBaseFare": 80,
         "TotalTaxes": 20,
+        "Sequence": 0,
         "FlightOptions": [
           {
-            "Sequence": 0,
+
             "FlightSegments": [
               {
                 "CombinablePriceFrom": 200,
@@ -347,9 +348,10 @@
         "FareType": "OneWay",
         "ToatBaseFare": 100,
         "TotalTaxes": 50,
+        "Sequence": 0,
         "FlightOptions": [
           {
-            "Sequence": 0,
+
             "FlightSegments": [
               {
                 "Key": "F2",
@@ -392,9 +394,10 @@
         "FareType": "OneWay",
         "ToatBaseFare": 150,
         "TotalTaxes": 50,
+        "Sequence": 0,
         "FlightOptions": [
           {
-            "Sequence": 0,
+
             "FlightSegments": [
               {
                 "Key": "F3",
@@ -437,9 +440,9 @@
         "FareType": "OneWay",
         "ToatBaseFare": 80,
         "TotalTaxes": 20,
+        "Sequence": 1,
         "FlightOptions": [
           {
-            "Sequence": 1,
             "FlightSegments": [
               {
                 "Key": "F4",
@@ -472,9 +475,9 @@
         "FareType": "OneWay",
         "ToatBaseFare": 80,
         "TotalTaxes": 20,
+        "Sequence": 1,
         "FlightOptions": [
           {
-            "Sequence": 1,
             "FlightSegments": [
               {
                 "Key": "F5",
@@ -507,9 +510,9 @@
         "FareType": "OneWay",
         "ToatBaseFare": 100,
         "TotalTaxes": 50,
+        "Sequence": 1,
         "FlightOptions": [
           {
-            "Sequence": 1,
             "FlightSegments": [
               {
                 "Key": "F6",
@@ -542,9 +545,9 @@
         "FareType": "OneWay",
         "ToatBaseFare": 100,
         "TotalTaxes": 50,
+        "Sequence": 1,
         "FlightOptions": [
           {
-            "Sequence": 1,
             "FlightSegments": [
               {
                 "Key": "F7",
@@ -577,9 +580,10 @@
         "FareType": "OneWay",
         "ToatBaseFare": 400,
         "TotalTaxes": 150,
+        "Sequence": 0,
         "FlightOptions": [
           {
-            "Sequence": 0,
+
             "FlightSegments": [
               {
                 "Key": "F8",
@@ -622,9 +626,9 @@
         "FareType": "OneWay",
         "ToatBaseFare": 350,
         "TotalTaxes": 100,
+        "Sequence": 1,
         "FlightOptions": [
           {
-            "Sequence": 1,
             "FlightSegments": [
               {
                 "Key": "F9",
@@ -657,9 +661,10 @@
         "FareType": "OneWay",
         "ToatBaseFare": 300,
         "TotalTaxes": 80,
+        "Sequence": 0,
         "FlightOptions": [
           {
-            "Sequence": 0,
+
             "FlightSegments": [
               {
                 "CombinablePriceFrom": 480,
