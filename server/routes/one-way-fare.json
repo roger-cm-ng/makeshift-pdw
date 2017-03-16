@@ -310,7 +310,7 @@
               {
                 "CombinablePriceFrom": 200,
                 "Key": "F1",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S1",
                     "CabinClassName": "Economy",
@@ -356,7 +356,7 @@
               {
                 "Key": "F2",
                 "CombinablePriceFrom": 250,
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S2",
                     "CabinClassName": "Economy",
@@ -402,7 +402,7 @@
               {
                 "Key": "F3",
                 "CombinablePriceFrom": 300,
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S3",
                     "CabinClassName": "Economy",
@@ -446,7 +446,7 @@
             "FlightSegments": [
               {
                 "Key": "F4",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S4",
                     "CabinClassName": "Economy",
@@ -481,7 +481,7 @@
             "FlightSegments": [
               {
                 "Key": "F5",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S5",
                     "CabinClassName": "Economy",
@@ -516,7 +516,7 @@
             "FlightSegments": [
               {
                 "Key": "F6",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S6",
                     "CabinClassName": "Economy",
@@ -551,7 +551,7 @@
             "FlightSegments": [
               {
                 "Key": "F7",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S7",
                     "CabinClassName": "Economy",
@@ -588,7 +588,7 @@
               {
                 "Key": "F8",
                 "CombinablePriceFrom": 650,
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S1",
                     "CabinClassName": "Business",
@@ -632,7 +632,7 @@
             "FlightSegments": [
               {
                 "Key": "F9",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S7",
                     "CabinClassName": "Business",
@@ -669,7 +669,7 @@
               {
                 "CombinablePriceFrom": 480,
                 "Key": "F10",
-                "BookingSegment": [
+                "BookingSegments": [
                   {
                     "SegmentId": "S8",
                     "CabinClassName": "Business",
