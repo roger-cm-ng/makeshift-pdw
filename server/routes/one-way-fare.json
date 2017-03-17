@@ -305,10 +305,18 @@
         "Sequence": 0,
         "FlightOptions": [
           {
-
+            "CombinablePriceFrom": 200,
+            "OneWayFaring": {
+              "MinCombineFlightSegment": [
+                "F4",
+                "F5"
+              ],
+              "OneWayExclude": [
+                "F6"
+              ]
+            },
             "FlightSegments": [
               {
-                "CombinablePriceFrom": 200,
                 "Key": "F1",
                 "BookingSegments": [
                   {
@@ -319,16 +327,7 @@
                     "CheckedItems": 0,
                     "BookingClass": "C"
                   }
-                ],
-                "OneWayFaring": {
-                  "MinCombineFlightSegment": [
-                    "F4",
-                    "F5"
-                  ],
-                  "OneWayExclude": [
-                    "F6"
-                  ]
-                }
+                ]
               }
             ]
           }
@@ -351,11 +350,19 @@
         "Sequence": 0,
         "FlightOptions": [
           {
-
+            "CombinablePriceFrom": 250,
+            "OneWayFaring": {
+              "MinCombineFlightSegment": [
+                "F5"
+              ],
+              "OneWayExclude": [
+                "F4",
+                "F6"
+              ]
+            },
             "FlightSegments": [
               {
                 "Key": "F2",
-                "CombinablePriceFrom": 250,
                 "BookingSegments": [
                   {
                     "SegmentId": "S2",
@@ -365,16 +372,7 @@
                     "CheckedItems": 0,
                     "BookingClass": "C"
                   }
-                ],
-                "OneWayFaring": {
-                  "MinCombineFlightSegment": [
-                    "F5"
-                  ],
-                  "OneWayExclude": [
-                    "F4",
-                    "F6"
-                  ]
-                }
+                ]
               }
             ]
           }
@@ -397,11 +395,19 @@
         "Sequence": 0,
         "FlightOptions": [
           {
-
+            "CombinablePriceFrom": 300,
+            "OneWayFaring": {
+              "MinCombineFlightSegment": [
+                "F5"
+              ],
+              "OneWayExclude": [
+                "F4",
+                "F6"
+              ]
+            },
             "FlightSegments": [
               {
                 "Key": "F3",
-                "CombinablePriceFrom": 300,
                 "BookingSegments": [
                   {
                     "SegmentId": "S3",
@@ -411,16 +417,7 @@
                     "CheckedItems": 0,
                     "BookingClass": "C"
                   }
-                ],
-                "OneWayFaring": {
-                  "MinCombineFlightSegment": [
-                    "F5"
-                  ],
-                  "OneWayExclude": [
-                    "F4",
-                    "F6"
-                  ]
-                }
+                ]
               }
             ]
           }
@@ -583,11 +580,19 @@
         "Sequence": 0,
         "FlightOptions": [
           {
-
+            "CombinablePriceFrom": 650,
+            "OneWayFaring": {
+              "MinCombineFlightSegment": [
+                "F5"
+              ],
+              "OneWayExclude": [
+                "F4",
+                "F6"
+              ]
+            },
             "FlightSegments": [
               {
                 "Key": "F8",
-                "CombinablePriceFrom": 650,
                 "BookingSegments": [
                   {
                     "SegmentId": "S1",
@@ -597,16 +602,7 @@
                     "CheckedItems": 0,
                     "BookingClass": "D"
                   }
-                ],
-                "OneWayFaring": {
-                  "MinCombineFlightSegment": [
-                    "F5"
-                  ],
-                  "OneWayExclude": [
-                    "F4",
-                    "F6"
-                  ]
-                }
+                ]
               }
             ]
           }
@@ -664,10 +660,20 @@
         "Sequence": 0,
         "FlightOptions": [
           {
-
+            "CombinablePriceFrom": 480,
+            "OneWayFaring": {
+              "MinCombineFlightSegment": [
+                "F5"
+              ],
+              "OneWayExclude": [
+                "F4",
+                "F6",
+                "F7",
+                "F9"
+              ]
+            },
             "FlightSegments": [
               {
-                "CombinablePriceFrom": 480,
                 "Key": "F10",
                 "BookingSegments": [
                   {
@@ -678,18 +684,7 @@
                     "CheckedItems": 0,
                     "BookingClass": "D"
                   }
-                ],
-                "OneWayFaring": {
-                  "MinCombineFlightSegment": [
-                    "F5"
-                  ],
-                  "OneWayExclude": [
-                    "F4",
-                    "F6",
-                    "F7",
-                    "F9"
-                  ]
-                }
+                ]
               }
             ]
           }
