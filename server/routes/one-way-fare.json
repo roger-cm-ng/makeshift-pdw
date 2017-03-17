@@ -315,19 +315,15 @@
                 "F6"
               ]
             },
-            "FlightSegments": [
+            "Key": "F1",
+            "BookingSegments": [
               {
-                "Key": "F1",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S1",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S1",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -360,19 +356,15 @@
                 "F6"
               ]
             },
-            "FlightSegments": [
+            "Key": "F2",
+            "BookingSegments": [
               {
-                "Key": "F2",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S2",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S2",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -405,19 +397,15 @@
                 "F6"
               ]
             },
-            "FlightSegments": [
+            "Key": "F3",
+            "BookingSegments": [
               {
-                "Key": "F3",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S3",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S3",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -440,19 +428,15 @@
         "Sequence": 1,
         "FlightOptions": [
           {
-            "FlightSegments": [
+            "Key": "F4",
+            "BookingSegments": [
               {
-                "Key": "F4",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S4",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S4",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -475,19 +459,15 @@
         "Sequence": 1,
         "FlightOptions": [
           {
-            "FlightSegments": [
+            "Key": "F5",
+            "BookingSegments": [
               {
-                "Key": "F5",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S5",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S5",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -510,19 +490,15 @@
         "Sequence": 1,
         "FlightOptions": [
           {
-            "FlightSegments": [
+            "Key": "F6",
+            "BookingSegments": [
               {
-                "Key": "F6",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S6",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S6",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -545,19 +521,15 @@
         "Sequence": 1,
         "FlightOptions": [
           {
-            "FlightSegments": [
+            "Key": "F7",
+            "BookingSegments": [
               {
-                "Key": "F7",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S7",
-                    "CabinClassName": "Economy",
-                    "CabinClass": "E",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "C"
-                  }
-                ]
+                "SegmentId": "S7",
+                "CabinClassName": "Economy",
+                "CabinClass": "E",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "C"
               }
             ]
           }
@@ -590,19 +562,15 @@
                 "F6"
               ]
             },
-            "FlightSegments": [
+            "Key": "F8",
+            "BookingSegments": [
               {
-                "Key": "F8",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S1",
-                    "CabinClassName": "Business",
-                    "CabinClass": "B",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "D"
-                  }
-                ]
+                "SegmentId": "S1",
+                "CabinClassName": "Business",
+                "CabinClass": "B",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "D"
               }
             ]
           }
@@ -625,19 +593,15 @@
         "Sequence": 1,
         "FlightOptions": [
           {
-            "FlightSegments": [
+            "Key": "F9",
+            "BookingSegments": [
               {
-                "Key": "F9",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S7",
-                    "CabinClassName": "Business",
-                    "CabinClass": "B",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "D"
-                  }
-                ]
+                "SegmentId": "S7",
+                "CabinClassName": "Business",
+                "CabinClass": "B",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "D"
               }
             ]
           }
@@ -672,19 +636,15 @@
                 "F9"
               ]
             },
-            "FlightSegments": [
+            "Key": "F10",
+            "BookingSegments": [
               {
-                "Key": "F10",
-                "BookingSegments": [
-                  {
-                    "SegmentId": "S8",
-                    "CabinClassName": "Business",
-                    "CabinClass": "B",
-                    "Farebasis": "ABCDEF",
-                    "CheckedItems": 0,
-                    "BookingClass": "D"
-                  }
-                ]
+                "SegmentId": "S8",
+                "CabinClassName": "Business",
+                "CabinClass": "B",
+                "Farebasis": "ABCDEF",
+                "CheckedItems": 0,
+                "BookingClass": "D"
               }
             ]
           }
