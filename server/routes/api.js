@@ -3,6 +3,7 @@ import cors from 'cors';
 import camelcaseKeys from 'camelcase-keys';
 import oneWayFare from './one-way-fare.json';
 import returnFare from './return-fare.json';
+import fareDetails from './fare-details.json';
 
 const Api = express.Router();
 Api.use(cors());
@@ -69,6 +70,15 @@ Api.get('/get-flights-return', (req, res) => {
   res.json({
     status: 200,
     data: camelcaseKeys(returnFare, { deep: true })
+  });
+});
+
+Api.get('/fare-details', (req, res) => {
+  res.json({
+    status: 200,
+    data: {
+      result: fareDetails
+    }
   });
 });
 
