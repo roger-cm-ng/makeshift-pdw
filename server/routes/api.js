@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import camelcaseKeys from 'camelcase-keys';
-import oneWayFare from './one-way-fare.json';
+import oneWayFare from './one-way-fare-old.json';
 import returnFare from './return-fare.json';
 import fareDetails from './fare-details.json';
 
