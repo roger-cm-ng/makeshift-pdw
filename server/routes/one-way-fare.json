@@ -69,7 +69,7 @@
         "OriginCode": "SYD",
         "DestinationCode": "CBR",
         "ArrivalTime": "2017-03-01T10:00:00+11:00",
-        "DepartureTime": "2017-03-01T11:00:00+11:00",
+        "DepartureTime": "2017-03-01T13:30:00+11:00",
         "TravelTime": 120,
         "FlightTime": 60,
         "Distance": 350,
