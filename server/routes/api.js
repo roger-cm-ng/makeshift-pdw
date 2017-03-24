@@ -46,10 +46,7 @@ Api.get('/get-hw-rotate-banners', (req, res) => {
 });
 
 Api.post('/flights-one-way', (req, res) => {
-  res.json({
-    status: 200,
-    data: camelcaseKeys(oneWayFare, { deep: true })
-  });
+  res.json(oneWayFare)
 });
 
 Api.post('/flights-return', (req, res) => {
@@ -60,10 +57,7 @@ Api.post('/flights-return', (req, res) => {
 });
 
 Api.get('/get-flights-one-way', (req, res) => {
-  res.json({
-    status: 200,
-    data: camelcaseKeys(oneWayFare, { deep: true })
-  });
+  res.json(oneWayFare)
 });
 
 Api.get('/get-flights-return', (req, res) => {
