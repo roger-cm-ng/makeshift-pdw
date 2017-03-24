@@ -1,5 +1,4 @@
 {
-	"data": {
 		"result": {
 			"legs": {
 				"1": {
@@ -139189,7 +139188,4 @@
 			"currency": "AUD"
 		},
 		"handShake": true
-	},
-	"status": 200,
-	"errors": []
-}
+	}
