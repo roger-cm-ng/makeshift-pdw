@@ -81,4 +81,8 @@ Api.post('/hero-carousel', (req, res) => {
   res.json(heroCarousel);
 });
 
+Api.get('/hero-carousel', (req, res) => {
+  res.json(heroCarousel);
+});
+
 export default Api;
