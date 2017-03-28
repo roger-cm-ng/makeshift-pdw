@@ -4,6 +4,7 @@ import camelcaseKeys from 'camelcase-keys';
 import oneWayFare from './one-way-fare.json';
 import returnFare from './return-fare.json';
 import fareDetails from './fare-details.json';
+import heroCarousel from './hero-carousel.json';
 
 const Api = express.Router();
 Api.use(cors());
@@ -74,6 +75,10 @@ Api.get('/fare-details', (req, res) => {
       result: fareDetails
     }
   });
+});
+
+Api.get('/hero-carousel', (req, res) => {
+  res.json(heroCarousel);
 });
 
 export default Api;
