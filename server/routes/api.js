@@ -77,7 +77,7 @@ Api.get('/fare-details', (req, res) => {
   });
 });
 
-Api.get('/hero-carousel', (req, res) => {
+Api.post('/hero-carousel', (req, res) => {
   res.json(heroCarousel);
 });
 
