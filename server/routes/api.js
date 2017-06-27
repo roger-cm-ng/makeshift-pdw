@@ -1,88 +1,91 @@
 import express from 'express';
 import cors from 'cors';
-import camelcaseKeys from 'camelcase-keys';
-import oneWayFare from './one-way-fare.json';
-import returnFare from './return-fare.json';
-import fareDetails from './fare-details.json';
-import heroCarousel from './hero-carousel.json';
-
+import mongoose from 'mongoose'
 const Api = express.Router();
+const Schema = mongoose.Schema;
+const mongodbUri = 'mongodb://ffx:ffx123@ds111748.mlab.com:11748/heroku_4fv3kgzm';
+
 Api.use(cors());
 
-Api.get('/get-all', (req, res) => {
-  res.json({
-    status: 200,
-    data: {
-      result: { foo: 'bar' }
-    }
-  });
+mongoose.connect(mongodbUri);
+
+const pageSchema = new Schema({
+	studentPageName: String,
+	teacherPageName: String,
+	author: String,
+	type: String,
+	grade: String,
+	topic: String,
+	subTopic: String,
+	created: Date,
+	status: String,
+	modules: Array
 });
 
-Api.get('/get-hw-rotate-banners', (req, res) => {
-  res.json({
-    status: 200,
-    data: {
-      result: [
-        {
-          desktop: 'http://lorempixel.com/1000/600/nature/1/',
-          mobile: 'http://lorempixel.com/500/100/nature/5/',
-          ctaImg: 'http://lorempixel.com/304/510/nature/1/',
-          cta: 'http://google.com'
-        },
-        {
-          desktop: 'http://lorempixel.com/1000/600/nature/2/',
-          mobile: 'http://lorempixel.com/500/100/nature/6/',
-          ctaImg: 'http://lorempixel.com/304/510/nature/2/',
-          cta: 'http://yahoo.com'
-        },
-        {
-          desktop: 'http://lorempixel.com/1000/600/nature/3/',
-          mobile: 'http://lorempixel.com/500/100/nature/7/',
-          ctaImg: 'http://lorempixel.com/304/510/nature/3/',
-          cta: 'http://microsoft.com'
-        }
-      ]
-    }
-  });
+const Pages = mongoose.model('pages', pageSchema);
+
+Api.get('/pages', (req, res) => {
+  Pages.find()
+    .then((results) => {
+      res.json({
+        status: 200,
+        results
+      });
+    })
 });
 
-Api.post('/flights-one-way', (req, res) => {
-  res.json(oneWayFare)
+Api.get('/pages/:id', (req, res) => {
+  console.log('id: ', req.params.id);
+	Pages.findOne({ _id: req.params.id })
+		.then((obj) => {
+			res.json({
+				status: 200,
+				results: obj
+			});
+		})
 });
 
-Api.post('/flights-return', (req, res) => {
-  res.json({
-    status: 200,
-    data: camelcaseKeys(returnFare, { deep: true })
-  });
-});
+Api.post('/pages', (req, res) => {
+	const item = {
+		studentPageName: req.body.studentPageName,
+		teacherPageName: req.body.teacherPageName,
+		author: req.body.author,
+		type: req.body.type,
+		grade: req.body.grade,
+		topic: req.body.topic,
+		subTopic: req.body.subTopic,
+		created: req.body.created,
+		status: req.body.status,
+		modules: req.body.modules
+  }
 
-Api.get('/get-flights-one-way', (req, res) => {
-  res.json(oneWayFare)
-});
+	let data;
 
-Api.get('/get-flights-return', (req, res) => {
-  res.json({
-    status: 200,
-    data: camelcaseKeys(returnFare, { deep: true })
-  });
-});
+	if (req.body._id) {
+		item._id = req.body._id
 
-Api.get('/fare-details', (req, res) => {
-  res.json({
-    status: 200,
-    data: {
-      result: fareDetails
-    }
-  });
-});
+		data = new Pages(item);
 
-Api.post('/hero-carousel', (req, res) => {
-  res.json(heroCarousel);
-});
+		Pages.findByIdAndUpdate(req.body._id, data)
+			.then((arr) => {
+				res.json({
+					status: 200,
+					results: arr
+				});
+			})
+	} else {
+		data = new Pages(item);
 
-Api.get('/hero-carousel', (req, res) => {
-  res.json(heroCarousel);
+	  data.save((err, pages) => {
+	    Pages.find()
+	      .then((arr) => {
+	        res.json({
+	          status: 200,
+	          results: arr
+	        });
+	      })
+	  });
+	}
 });
 
 export default Api;
