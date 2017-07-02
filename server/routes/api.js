@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+
 const Api = express.Router();
 const Schema = mongoose.Schema;
 const mongodbUri = 'mongodb://ffx:ffx123@ds111748.mlab.com:11748/heroku_4fv3kgzm';
@@ -17,7 +18,7 @@ const pageSchema = new Schema({
 	grade: String,
 	topic: String,
 	subTopic: String,
-	created: Date,
+	created: String,
 	status: String,
 	modules: Array
 });
@@ -79,11 +80,14 @@ Api.post('/pages', (req, res) => {
 	  data.save((err, pages) => {
 	    Pages.find()
 	      .then((arr) => {
+					let content = {};
+					const page = arr.find((i) => i.created === req.body.created);
 	        res.json({
 	          status: 200,
-	          results: arr
+	          results: page
 	        });
 	      })
+				.then()
 	  });
 	}
 });
