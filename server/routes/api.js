@@ -44,6 +44,11 @@ Api.get('/pages/distinct/:field',(req, res)=>{
 Api.post('/pages/filter',(req, res)=>{
   const search = req.body.filter.search;
   if (search){
+    // Seems like the $text does not work? Old version? 
+    // Anyway it times out
+    // https://docs.mongodb.com/manual/reference/operator/query/text/
+    //
+    // Maybe the 'String' fields are not indexed.
     const textSearch = {
       $text:{
         $search:search
@@ -71,9 +76,10 @@ Api.post('/pages/filter',(req, res)=>{
             "search": ""
           }
         }
+       into mongoFind query.
+       Some fields are text regexps
+       created is a date range...
 
-
-       into a whole lot of reqexps.
     */
     const qry = req.body.filter
     const mongoFind = {};
