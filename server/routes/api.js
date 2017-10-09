@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import {each as _each} from 'lodash'
 
 const Api = express.Router();
 const Schema = mongoose.Schema;
@@ -38,6 +39,68 @@ Api.get('/pages/distinct/:field',(req, res)=>{
     .then(obj=>{
       res.json(obj)
     })
+})
+
+Api.post('/pages/filter',(req, res)=>{
+  const search = req.body.filter.search;
+  if (search){
+    const textSearch = {
+      $text:{
+        $search:search
+      }
+    };
+    Pages.find(textSearch)
+    // Pages.find({type:{$regex: 'Activ|Pho',$options: "i" }})
+      .then(obj => {
+        res.json(obj)
+      })
+  }else{
+    /* Map the posted thing 
+
+        {
+          "filter":{
+            "type": "phonics",
+            "grade": 3,
+            "topic": "",
+            "subTopic": "",
+            "status": "",
+            "created": {
+              "startDate": null,
+              "endDate": null
+            },
+            "search": ""
+          }
+        }
+
+
+       into a whole lot of reqexps.
+    */
+    const qry = req.body.filter
+    const mongoFind = {};
+    _each(['type','grade','topic','subTopic'],field=>{
+      if (qry[field]){
+        mongoFind[field] = {
+          $regex: qry[field],
+          $options: 'i'
+        }
+      }
+    })
+    _each(['created'],dateRange=>{
+      const {startDate,endDate } = qry[dateRange]
+      if(startDate && endDate){
+        mongoFind[dateRange] = {
+          $gte: startDate,
+          $lte: endDate
+        }
+      }
+    })
+    // res.json(mongoFind)
+    Pages.find(mongoFind)
+      .then(obj=>{
+        res.json(obj)
+      })
+  }
+
 })
 
 Api.get('/pages/:id', (req, res) => {
