@@ -33,6 +33,13 @@ Api.get('/pages', (req, res) => {
     })
 });
 
+Api.get('/pages/distinct/:field',(req, res)=>{
+  Pages.distinct(req.params.field)
+    .then(obj=>{
+      res.json(obj)
+    })
+})
+
 Api.get('/pages/:id', (req, res) => {
 	Pages.findOne({ _id: req.params.id })
 		.then((obj) => {
