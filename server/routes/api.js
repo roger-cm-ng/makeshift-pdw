@@ -36,8 +36,12 @@ Api.get('/pages', (req, res) => {
 
 Api.get('/pages/distinct/:field',(req, res)=>{
   Pages.distinct(req.params.field)
-    .then(obj=>{
-      res.json(obj)
+    .then( obj => {
+      // Include info about what was fetched in the json
+      // so that we can use the payload from genericFetch
+      const ret = {};
+      ret[req.params.field] = obj;
+      res.json(ret)
     })
 })
 
@@ -49,6 +53,7 @@ Api.post('/pages/filter',(req, res)=>{
     // https://docs.mongodb.com/manual/reference/operator/query/text/
     //
     // Maybe the 'String' fields are not indexed.
+    // TODO: Convert the search field into a regexp in every field....
     const textSearch = {
       $text:{
         $search:search
