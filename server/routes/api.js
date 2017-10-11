@@ -47,6 +47,7 @@ Api.get('/pages/distinct/:field',(req, res)=>{
 
 Api.post('/pages/filter',(req, res)=>{
   const search = req.body.filter.search;
+  // Should use https://www.npmjs.com/package/escape-string-regexp to remove regexp
   if (search){
     // Seems like the $text does not work? Old version? 
     // Anyway it times out
@@ -54,16 +55,33 @@ Api.post('/pages/filter',(req, res)=>{
     //
     // Maybe the 'String' fields are not indexed.
     // TODO: Convert the search field into a regexp in every field....
+    
+    /*
     const textSearch = {
       $text:{
         $search:search
       }
     };
-    Pages.find(textSearch)
     // Pages.find({type:{$regex: 'Activ|Pho',$options: "i" }})
+    Pages.find(textSearch)
       .then(obj => {
         res.json(obj)
       })
+    */
+    const mongoFind = { '$or': [] }
+    _each(['type','grade','topic','subTopic','status'],field => {
+      const condition = {};
+      condition[field]={
+        $regex: search,
+        $options: 'i'
+      }
+      mongoFind['$or'].push(condition);
+    });
+    Pages.find(mongoFind)
+      .then(obj => {
+        res.json(obj)
+      })
+
   }else{
     /* Map the posted thing 
 
@@ -81,9 +99,14 @@ Api.post('/pages/filter',(req, res)=>{
             "search": ""
           }
         }
+
        into mongoFind query.
        Some fields are text regexps
        created is a date range...
+
+       can we npm install on heroku? 
+      
+      should escape user input....
 
     */
     const qry = req.body.filter
