@@ -111,7 +111,7 @@ Api.post('/pages/filter',(req, res)=>{
     */
     const qry = req.body.filter
     const mongoFind = {};
-    _each(['type','grade','topic','subTopic','status'],field=>{
+    _each(['author','type','grade','topic','subTopic','status'],field=>{
       if (qry[field]){
         mongoFind[field] = {
           $regex: qry[field],
