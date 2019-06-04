@@ -2,7 +2,7 @@
     {
         "meta": {
             "module": "activity",
-            "type": "learnosity",
+            "type": "cat",
             "pageId": 123,
             "layoutVersion": 2,
             "contentVersion": 1,
