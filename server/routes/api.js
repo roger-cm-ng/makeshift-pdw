@@ -6,8 +6,12 @@ const Api = express.Router();
 
 Api.use(cors());
 
-Api.get('/activity', (req, res) => {
-  res.json(activity);
+Api.get('/activity/:id', (req, res) => {
+  let data = {};
+  if (req.params.id === 'GIRL123') {
+    data = activity;
+  }
+  res.json(data);
 });
 
 export default Api;
