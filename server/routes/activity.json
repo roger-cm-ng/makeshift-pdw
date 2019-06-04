@@ -1,0 +1,21 @@
+[
+    {
+        "meta": {
+            "module": "activity",
+            "type": "learnosity",
+            "pageId": 123,
+            "layoutVersion": 2,
+            "contentVersion": 1,
+            "locale": "en-AU",
+            "layoutPath": "content-api/123/layout_2.json",
+            "contentPath": "content-api/123/en-AU/layout_2_content_1.json"
+        },
+        "data": []
+    },
+    {
+        "meta": {
+            "module": "provelet"
+        },
+        "data": []
+    }
+]
