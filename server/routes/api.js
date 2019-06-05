@@ -6,9 +6,9 @@ const Api = express.Router();
 
 Api.use(cors());
 
-Api.get('/activity/:id', (req, res) => {
+Api.post('/request-data', (req, res) => {
   let data = {};
-  if (req.params.id === 'GIRL123') {
+  if (req.body.girlId === 'GIRL123') {
     data = activity;
   }
   res.json(data);
