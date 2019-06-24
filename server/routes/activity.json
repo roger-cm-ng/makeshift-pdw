@@ -7,8 +7,8 @@
             "layoutVersion": 2,
             "contentVersion": 1,
             "locale": "en-AU",
-            "layoutPath": "9550/layout_3.json",
-            "contentPath": "9550/en-AU/layout_3_content_1.json"
+            "layoutPath": "content-api/9550/layout_3.json",
+            "contentPath": "content-api/9550/en-AU/layout_3_content_1.json"
         },
         "data": [
             {  
