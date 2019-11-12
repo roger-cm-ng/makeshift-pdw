@@ -20,8 +20,16 @@ Api.get('/error/:code', (req, res) => {
   res.status(parseInt(req.params.code)).json({ foo: 'bar' });
 });
 
-Api.post('/assignmentDetails', (req, res) => {
-  res.status(200).json(assignmentDetails);
+Api.post('/assignmentDetails', (req, res) => {  
+  let data = {};
+  if (req.body.assignmentId === 'abc123') {
+    data = assignmentDetails;
+    res.status(200).json(data);
+  } else {
+    res.status(404).json({
+      error: 'no assignment found'
+    });
+  }  
 });
 
 export default Api;
