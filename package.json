@@ -80,6 +80,7 @@
     "normalize.css": "^3.0.3",
     "progress-bar-webpack-plugin": "^1.9.0",
     "promise-polyfill": "^4.0.3",
+    "random-item": "^3.0.0",
     "react": "^0.14.7",
     "react-addons-css-transition-group": "^0.14.8",
     "react-addons-test-utils": "^15.0.1",
