@@ -9,13 +9,7 @@ const Api = express.Router();
 Api.use(cors());
 
 Api.post('/assignmentDetails', (req, res) => {
-  if (req.body.assignmentId === 'abc123') {
-    res.status(200).json(assignmentDetails);
-  } else {
-    res.status(404).json({
-      error: 'no assignment found'
-    });
-  }  
+  res.status(200).json(assignmentDetails);
 });
 
 Api.post('/getQuestion', (req,res) => {

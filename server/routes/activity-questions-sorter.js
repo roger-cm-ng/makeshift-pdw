@@ -14,6 +14,5 @@ export const activityQuestionsSorter = ({
     } else {
         index[assignmentId] = 0;
     }
-    console.log(index);
     return activityQuestions[index[assignmentId]];
 };
