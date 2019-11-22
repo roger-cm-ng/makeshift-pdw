@@ -1,14 +1,19 @@
 import activityQuestions from './activity-questions.json';
-import randomItem from 'random-item';
+import _ from 'lodash';
+
+const index = {};
 
 export const activityQuestionsSorter = ({
-    isCorrect
+    assignmentId
 }) => {
-    let question = {};
-    if (isCorrect) {
-        question = randomItem(activityQuestions.nonDistractor);
+    if (_.has(index, assignmentId)) {
+        index[assignmentId] += 1
+        if (index[assignmentId] === activityQuestions.length) {
+            index[assignmentId] = 0
+        }
     } else {
-        question = randomItem(activityQuestions.distractor);
+        index[assignmentId] = 0;
     }
-    return question;
+    console.log(index);
+    return activityQuestions[index[assignmentId]];
 };

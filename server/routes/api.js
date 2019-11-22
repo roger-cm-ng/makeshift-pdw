@@ -19,25 +19,15 @@ Api.post('/assignmentDetails', (req, res) => {
 });
 
 Api.post('/getQuestion', (req,res) => {
-  if (req.body.assignmentId === 'abc123' && req.body.locale === 'en-AU') {
-    res.status(200).json(activityQuestions.nonDistractor[0]);
-  } else {
-    res.status(404).json({
-      error: 'no assignment found'
-    });
-  } 
+  res.status(200).json(activityQuestionsSorter({
+    assignmentId: req.body.assignmentId
+  }));
 });
 
 Api.post('/saveQuestion', (req,res) => {
-  if (req.body.assignmentId === 'abc123' && req.body.locale === 'en-AU') {
-    res.status(200).json(activityQuestionsSorter({
-      isCorrect: req.body.isCorrect
-    }));
-  } else {
-    res.status(404).json({
-      error: 'no assignment found'
-    });
-  } 
+  res.status(200).json(activityQuestionsSorter({
+    assignmentId: req.body.assignmentId
+  }));
 });
 
 export default Api;
