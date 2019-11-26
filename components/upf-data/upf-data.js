@@ -19,6 +19,8 @@ const UpfData = () => {
   const dispatch = useDispatch();
   const [localDetails, setLocalDetails] = useState({});
   const [localQuestion, setLocalQuestion] = useState({});
+  const [isLocalDetailsValid, setIsLocalDetailsValid] = useState(true);
+  const [isLocalQuestionValid, setIsLocalQuestionValid] = useState(true);
 
   useEffect(() => {
     dispatch(processServerData({
@@ -34,63 +36,95 @@ const UpfData = () => {
     }));
   }, []);
 
+  const handleLocalDetailsValue = (value) => {
+    if (value.error) {
+      setIsLocalDetailsValid(false);
+    } else {
+      setIsLocalDetailsValid(true);
+      setLocalDetails(JSON.parse(value.json));
+    }
+  };
+
+  const handleLocalQuestionValue = (value) => {
+    if (value.error) {
+      setIsLocalQuestionValid(false);
+    } else {
+      setIsLocalQuestionValid(true);
+      setLocalQuestion(JSON.parse(value.json));
+    }
+  };
+
   return (
     <div className={css['upf-data']}>
       <h1>Insert UPF data</h1>
-      <h3>Landing data</h3>
+      <h2>Landing data</h2>
       <div className={css.details}>
-        <JSONInput
-          id="details-edit"
-          placeholder={localDetails}
-          onChange={value => setLocalDetails(JSON.parse(value.json))}
-          locale={locale}
-          height="400px"
-          width="300px"
-          onKeyPressUpdate={false}
-        />
+        <div className={css['editor-panel']}>
+          <p>Local</p>
+          <JSONInput
+            id="details-edit"
+            placeholder={localDetails}
+            onChange={value => handleLocalDetailsValue(value)}
+            locale={locale}
+            height="400px"
+            width="300px"
+            onKeyPressUpdate={false}
+          />
+        </div>
         <ButtonArrow
           callBack={() => dispatch(processServerData({
             endPoint: SET_DETAILS_ENDPOINT,
             type: DETAILS_SET,
             body: localDetails
           }))}
+          disabled={!isLocalDetailsValid}
         />
-        <JSONInput
-          id="details-view"
-          placeholder={detailsReducer}
-          locale={locale}
-          height="400px"
-          width="300px"
-          viewOnly
-        />
+        <div className={css['editor-panel']}>
+          <p>Server</p>
+          <JSONInput
+            id="details-view"
+            placeholder={detailsReducer}
+            locale={locale}
+            height="400px"
+            width="300px"
+            viewOnly
+          />
+        </div>
       </div>
 
-      <h3>Question data</h3>
+      <h2>Question data</h2>
       <div className={css.question}>
-        <JSONInput
-          id="question-edit"
-          placeholder={localQuestion}
-          onChange={value => setLocalQuestion(JSON.parse(value.json))}
-          locale={locale}
-          height="400px"
-          width="300px"
-          onKeyPressUpdate={false}
-        />
+        <div className={css['editor-panel']}>
+          <p>Local</p>
+          <JSONInput
+            id="question-edit"
+            placeholder={localQuestion}
+            onChange={value => handleLocalQuestionValue(value)}
+            locale={locale}
+            height="400px"
+            width="300px"
+            onKeyPressUpdate={false}
+          />
+        </div>
         <ButtonArrow
           callBack={() => dispatch(processServerData({
             endPoint: SET_QUESTION_ENDPOINT,
             type: QUESTION_SET,
             body: localQuestion
           }))}
+          disabled={!isLocalQuestionValid}
         />
-        <JSONInput
-          id="question-view"
-          placeholder={questionReducer}
-          locale={locale}
-          height="400px"
-          width="300px"
-          viewOnly
-        />
+        <div className={css['editor-panel']}>
+          <p>Server</p>
+          <JSONInput
+            id="question-view"
+            placeholder={questionReducer}
+            locale={locale}
+            height="400px"
+            width="300px"
+            viewOnly
+          />
+        </div>
       </div>
     </div>
   );

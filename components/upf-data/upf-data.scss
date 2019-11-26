@@ -6,19 +6,15 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: lavender;
+  }
+
+  .editor-panel {
+    margin: 10px;
   }
 }
 
-:global(#details-edit-outer-box),
-:global(#question-edit-outer-box) {
-  margin: 0 10px 0 0 !important;
-}
-
-:global(#details-view-outer-box),
-:global(#question-view-outer-box) {
-  margin: 0 0 0 10px !important;
-
-  :global(#details-view-body) {
-    background-color: rgb(20, 0, 68) !important;
-  }
+:global(#details-view-body),
+:global(#question-view-body) {
+  background-color: rgb(20, 0, 68) !important;
 }

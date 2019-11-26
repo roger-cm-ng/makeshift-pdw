@@ -9,4 +9,19 @@
   border-radius: 60px;
   font-size: 30px;
   cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: orange;
+  }
+
+  &:active {
+    background-color: black;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    background-color: red;
+    cursor: unset;
+  }
 }
