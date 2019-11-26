@@ -92,7 +92,8 @@ const UpfData = () => {
         </div>
       </div>
 
-      <h2>Question data (Available GiRL IDs on QA env - GiRL018220, GiRL018216, GiRL018221, GiRL018218, GiRL018222, GiRL018219</h2>
+      <h2>Question data</h2>
+      <p>Available GiRL IDs on QA env - GiRL018220, GiRL018216, GiRL018221, GiRL018218, GiRL018222, GiRL018219</p>
       <div className={css.question}>
         <div className={css['editor-panel']}>
           <p>Local</p>
