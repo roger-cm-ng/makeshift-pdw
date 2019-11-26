@@ -1,5 +1,5 @@
-module.exports = function() {
-  return {
-    'hwrld-reload': './components/reload/hwrld-reload'
-	}
-}
+module.exports = function exports() {
+    return {
+        'entry-app': ['whatwg-fetch', './components/reload/entry-app']
+    };
+};

@@ -1,7 +1,21 @@
-module.exports = function() {
-  return {
-    test: /\.scss/,
-    exclude: /node_modules/,
-    loaders: ['style', 'css?modules&localIdentName=[local]---[hash:base64:5]', 'cssnext', 'sass']
-  }
-}
+module.exports = function exports() {
+    return {
+        test: /\.(scss)$/,
+        exclude: /node_modules/,
+        loaders: [
+            {
+                loader: 'style-loader'
+            },
+            {
+                loader:
+                    'css-loader?modules&localIdentName=[local]---[hash:base64:5]'
+            },
+            {
+                loader: 'postcss-loader'
+            },
+            {
+                loader: 'sass-loader'
+            }
+        ]
+    };
+};

@@ -1,7 +1,7 @@
-module.exports = function() {
-  return {
-    test: /\.json/,
-    exclude: /node_modules/,
-    loader: 'json-loader'
-  }
-}
+module.exports = function exports() {
+    return {
+        test: /\.json/,
+        exclude: /node_modules/,
+        loader: 'json-loader'
+    };
+};

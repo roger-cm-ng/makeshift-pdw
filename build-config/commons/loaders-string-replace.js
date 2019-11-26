@@ -1,6 +1,6 @@
-var StringReplacePlugin = require('string-replace-webpack-plugin');
+const StringReplacePlugin = require('string-replace-webpack-plugin');
 
-module.exports = function(regExp, replacement) {
+module.exports = function (regExp, replacement) {
   return {
     test: /\.(scss|js)$/,
     exclude: /node_modules/,
@@ -8,11 +8,11 @@ module.exports = function(regExp, replacement) {
       replacements: [
         {
           pattern: regExp,
-          replacement: function () {
+          replacement() {
             return replacement;
           }
         }
       ]
     })
-  }
-}
+  };
+};

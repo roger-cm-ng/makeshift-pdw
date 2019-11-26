@@ -1,48 +1,39 @@
-var webpack = require('webpack');
-var StringReplacePlugin = require('string-replace-webpack-plugin');
-var commons = require('./commons');
-var baseUrl = '//morning-island-22730.herokuapp.com';
+const webpack = require('webpack');
+const path = require('path');
+const webpackMerge = require('webpack-merge');
+const CommonConfig = require('./webpack.common');
+const commons = require('./commons');
 
-console.log('production build');
+const baseUrl = 'https://scrum-cards.herokuapp.com';
 
-module.exports = {
-	resolve: commons.resolve(),
+module.exports = webpackMerge(CommonConfig, {
+    output: {
+        path: path.resolve('public/bundles'),
+        filename: '[name].js',
+        publicPath: '/',
+        jsonpFunction: 'DUCSChunkJSONPLoader'
+    },
 
-	context: commons.context(),
-
-	entry: commons.entry(),
-
-	output: commons.output(),
-
-	plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-		commons.providePlugin(),
-		new StringReplacePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress:{
-        warnings: true
-      }
-    })
-	],
-
-	devServer: commons.devServer(),
-
-	module: {
-		preLoaders: [
-      commons.preloadersEslint()
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     },
+        //     sourceMap: true
+        // }),
+        new webpack.SourceMapDevToolPlugin({
+            filename: './sourcemaps/[name].js.map'
+        })
     ],
 
-		loaders: [
-			commons.loadersBabel(),
-			commons.loadersStyle(),
-			commons.loadersJson(),
-			commons.loadersStringReplace(/\+\+BASE_URL\+\+/ig, baseUrl),
-      commons.loadersStringStrip('console.log')
-		]
-	}
-}
+    module: {
+      rules: [
+        commons.loadersStringReplace(/\#BASE_URL\#/ig, baseUrl)
+      ]
+    }
+});

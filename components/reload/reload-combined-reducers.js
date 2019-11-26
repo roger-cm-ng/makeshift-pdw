@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux';
 
-const ReloadCombinedReducers = combineReducers({
-
-});
+const ReloadCombinedReducers = combineReducers({});
 
 export default ReloadCombinedReducers;
