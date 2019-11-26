@@ -8,8 +8,36 @@ const Api = express.Router();
 
 Api.use(cors());
 
-let standingDetails = {};
-let standingQuestion = {};
+let standingDetails = {
+  courseId: 1,
+  courseVersionId: 1,
+  standardId: 1,
+  learningJourneyId: 2,
+  description: 'Learning journey',
+  standardDescription: 'Standard',
+  strandCode: 'NA',
+  stepCount: 1,
+  subStrandCode: 'FRA',
+  stepsCompleted: 2,
+  user: {
+    firstName: 'John',
+    lastName: 'Dough'
+  }
+};
+let standingQuestion = {
+  streakAchieved: false,
+  streak: [],
+  totalPoints: 0,
+  needAttention: false,
+  stepsCompleted: 0,
+  nextQuestion: {
+    id: 'GiRL018220',
+    pageId: 10158,
+    layoutVersion: 1,
+    contentVersion: 1,
+    locale: 'en-AU'
+  }
+};
 
 const processQuestion = (assignmentId) => {
   const current = /Current/.exec(assignmentId);
@@ -47,12 +75,12 @@ Api.post('/saveQuestion', (req, res) => {
 });
 
 Api.post('/setDetails', (req, res) => {
-  standingDetails = req.body.currentDetails;
+  standingDetails = req.body;
   res.status(200).json(standingDetails);
 });
 
 Api.post('/setQuestion', (req, res) => {
-  standingQuestion = req.body.currentQuestion;
+  standingQuestion = req.body;
   res.status(200).json(standingQuestion);
 });
 
