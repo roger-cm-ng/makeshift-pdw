@@ -11,6 +11,16 @@
 
   .editor-panel {
     margin: 10px;
+    position: relative;
+
+    .invisible-btn {
+      position: absolute;
+      z-index: 20;
+      // background-color: orange;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 

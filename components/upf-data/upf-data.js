@@ -84,6 +84,10 @@ const UpfData = () => {
           disabled={!isLocalDetailsValid}
         />
         <div className={css['editor-panel']}>
+          <div
+            className={css['invisible-btn']}
+            onClick={() => setLocalDetails(detailsReducer)}
+          />
           <p>Server</p>
           <JSONInput
             id="details-view"
@@ -97,7 +101,7 @@ const UpfData = () => {
       </div>
 
       <h2>Question data</h2>
-      <p>Available GiRL|CAT IDs on QA env - GiRL018220 | 10158, GiRL018216 | 10154, GiRL018221 | 10159, GiRL018218 | 10156, GiRL018222 | 10160, GiRL018219 | 10157</p>
+      <p>Available GiRL|CAT IDs on QA env - GiRL018220 | 10158, GiRL018216 | 10154, GiRL018221 | 10159, GiRL018218 | 10156, GiRL018222 | 10160, GiRL018219 | 10157, GiRL018269 | 10203, GiRL018270 | 10204, GiRL018271 | 10205, GiRL018272 | 10206</p>
       <div className={css.question}>
         <div className={css['editor-panel']}>
           <p>Local</p>
@@ -120,6 +124,10 @@ const UpfData = () => {
           disabled={!isLocalQuestionValid}
         />
         <div className={css['editor-panel']}>
+          <div
+            className={css['invisible-btn']}
+            onClick={() => setLocalQuestion(questionReducer)}
+          />
           <p>Server</p>
           <JSONInput
             id="question-view"
