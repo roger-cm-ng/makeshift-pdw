@@ -1,0 +1,54 @@
+$spinner-radius: 45px;
+$spinner-tick-width: 10px;
+$spinner-tick-height: 20px;
+$spinner-animation-duration: 1s;
+$spinner-ticks-count: 12;
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.25);
+
+  .spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: #{2 * $spinner-radius};
+    height: #{2 * $spinner-radius};
+
+    .spinner-tick {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: #{$spinner-radius - ($spinner-tick-width / 2)};
+      width: $spinner-tick-width;
+      height: $spinner-tick-height;
+      border-radius: 50%;
+      background: orange;
+      transform-origin: #{($spinner-tick-width / 2)} $spinner-radius;
+      animation: spinner-animation $spinner-animation-duration linear infinite;
+
+      @for $i from 1 through $spinner-ticks-count {
+        &:nth-child(#{$i}) {
+          transform: rotate(#{(360 / $spinner-ticks-count) * $i}deg);
+          animation-delay: #{-$spinner-animation-duration + ($i * ($spinner-animation-duration / $spinner-ticks-count))};
+        }
+      }
+    }
+
+    @keyframes spinner-animation {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}

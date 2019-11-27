@@ -13,9 +13,10 @@ import {
   SET_QUESTION_ENDPOINT
 } from './upf-data-actions';
 import ButtonArrow from '../button-arrow/button-arrow';
+import Spinner from '../spinner/spinner';
 
 const UpfData = () => {
-  const { detailsReducer, questionReducer } = useSelector(state => state);
+  const { detailsReducer, questionReducer, spinnerReducer } = useSelector(state => state);
   const dispatch = useDispatch();
   const [localDetails, setLocalDetails] = useState({});
   const [localQuestion, setLocalQuestion] = useState({});
@@ -56,6 +57,9 @@ const UpfData = () => {
 
   return (
     <div className={css['upf-data']}>
+      <Spinner
+        show={spinnerReducer.length > 0 || false}
+      />
       <h1>Insert UPF data</h1>
       <h2>Landing data</h2>
       <div className={css.details}>
