@@ -3,50 +3,35 @@ import cors from 'cors';
 import _ from 'lodash';
 import assignmentDetails from './assignment-details.json';
 import activityQuestionsSorter from './activity-questions-sorter';
+import activityQuestions from './activity-questions.json';
 
 const Api = express.Router();
 
 Api.use(cors());
 
-let standingDetails = {
-  courseId: 1,
-  courseVersionId: 1,
-  standardId: 1,
-  learningJourneyId: 2,
-  description: 'Learning journey',
-  standardDescription: 'Standard',
-  strandCode: 'NA',
-  stepCount: 1,
-  subStrandCode: 'FRA',
-  stepsCompleted: 2,
-  user: {
-    firstName: 'John',
-    lastName: 'Dough'
-  }
-};
-let standingQuestion = {
-  streakAchieved: false,
-  streak: [],
-  totalPoints: 0,
-  needAttention: false,
-  stepsCompleted: 0,
-  nextQuestion: {
-    id: 'GiRL018220',
-    pageId: 10158,
-    layoutVersion: 1,
-    contentVersion: 1,
-    locale: 'en-AU'
-  }
-};
+const session = {};
+
+const members = ['er', 'sm', 'gt', 'ra', 'ie', 'rn', 'va', 'js', 'ro', 'dh', 'nc'];
+
+members.forEach((member) => {
+  session[member] = {
+    currentDetails: assignmentDetails,
+    currentQuestion: activityQuestions[0]
+  };
+});
+
+const memberRegexStr = `-${members.join('-|-')}-`;
 
 const processQuestion = (assignmentId) => {
-  const current = /Current/.exec(assignmentId);
+  const current = new RegExp(memberRegexStr).exec(assignmentId);
+  let member;
   let question = activityQuestionsSorter({
     assignmentId
   });
 
   if (current) {
-    question = standingQuestion;
+    member = current[0].replace(/-/ig, '');
+    question = session[member].currentQuestion;
   }
 
   return question;
@@ -54,11 +39,13 @@ const processQuestion = (assignmentId) => {
 
 Api.post('/assignmentDetails', (req, res) => {
   const crownNum = /Crown[1-5]/.exec(req.body.assignmentId);
-  const current = /Current/.exec(req.body.assignmentId);
+  const current = new RegExp(memberRegexStr).exec(req.body.assignmentId);
+  let member;
   let details = _.clone(assignmentDetails);
 
   if (current) {
-    details = standingDetails;
+    member = current[0].replace(/-/ig, '');
+    details = session[member].currentDetails;
   } else if (crownNum) {
     details.stepCount = Number(crownNum[0][5]);
   }
@@ -74,14 +61,18 @@ Api.post('/saveQuestion', (req, res) => {
   res.status(200).json(processQuestion(req.body.assignmentId));
 });
 
+Api.get('/members', (req, res) => {
+  res.status(200).json(members);
+});
+
 Api.post('/setDetails', (req, res) => {
-  standingDetails = req.body;
-  res.status(200).json(standingDetails);
+  session[req.body.member].currentDetails = req.body.data;
+  res.status(200).json(session[req.body.member].currentDetails);
 });
 
 Api.post('/setQuestion', (req, res) => {
-  standingQuestion = req.body;
-  res.status(200).json(standingQuestion);
+  session[req.body.member].currentQuestion = req.body.data;
+  res.status(200).json(session[req.body.member].currentQuestion);
 });
 
 export default Api;

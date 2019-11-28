@@ -12,16 +12,20 @@ export const SERVER_QUESTION_SET = 'SERVER_QUESTION_SET';
 export const LOCAL_QUESTION_SET = 'LOCAL_QUESTION_SET';
 export const IS_LOCAL_QUESTION_VALID_SET = 'IS_LOCAL_QUESTION_VALID_SET';
 
+export const MEMBERS_ENDPOINT = 'members';
+export const MEMBERS_ACQUIRED = 'MEMBERS_ACQUIRED';
+
 export const COMPONENT_ENABLED_SPINNER = 'COMPONENT_ENABLED_SPINNER';
 export const COMPONENT_DISABLED_SPINNER = 'COMPONENT_DISABLED_SPINNER';
 export const GIRL_CAT_INJECTED = 'GIRL_CAT_INJECTED';
 
-const API_BASE_URL = 'https://rog-api-mock.herokuapp.com/api';
+const API_BASE_URL = 'http://localhost:3000/api';
 
 export const processServerData = ({
   endPoint,
   body,
-  type
+  type,
+  method = 'post'
 }) => async (dispatch) => {
   dispatch({
     type: COMPONENT_ENABLED_SPINNER,
@@ -29,7 +33,7 @@ export const processServerData = ({
   });
   try {
     const res = await axios({
-      method: 'post',
+      method,
       url: `${API_BASE_URL}/${endPoint}`,
       data: body
     });

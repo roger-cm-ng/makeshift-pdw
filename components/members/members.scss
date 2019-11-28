@@ -1,0 +1,21 @@
+.members {
+  .btn {
+    color: white;
+    width: 46px;
+    height: 46px;
+    border-radius: 46px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: black !important;
+      border: dotted yellow 4px;
+      cursor: unset;
+    }
+  }
+
+  margin-bottom: 20px;
+}
