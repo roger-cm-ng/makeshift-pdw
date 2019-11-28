@@ -1,14 +1,20 @@
 import axios from 'axios';
 
-export const DETAILS_SET = 'DETAILS_SET';
-export const QUESTION_SET = 'QUESTION_SET';
+export const SET_DETAILS_ENDPOINT = 'setDetails';
+export const GET_DETAILS_ENDPOINT = 'assignmentDetails';
+export const SERVER_DETAILS_SET = 'SERVER_DETAILS_SET';
+export const LOCAL_DETAILS_SET = 'LOCAL_DETAILS_SET';
+export const IS_LOCAL_DETAILS_VALID_SET = 'IS_LOCAL_DETAILS_VALID_SET';
+
+export const SET_QUESTION_ENDPOINT = 'setQuestion';
+export const GET_QUESTION_ENDPOINT = 'getQuestion';
+export const SERVER_QUESTION_SET = 'SERVER_QUESTION_SET';
+export const LOCAL_QUESTION_SET = 'LOCAL_QUESTION_SET';
+export const IS_LOCAL_QUESTION_VALID_SET = 'IS_LOCAL_QUESTION_VALID_SET';
+
 export const COMPONENT_ENABLED_SPINNER = 'COMPONENT_ENABLED_SPINNER';
 export const COMPONENT_DISABLED_SPINNER = 'COMPONENT_DISABLED_SPINNER';
-export const SET_DETAILS_ENDPOINT = 'setDetails';
-export const SET_QUESTION_ENDPOINT = 'setQuestion';
-export const GET_DETAILS_ENDPOINT = 'assignmentDetails';
-export const GET_QUESTION_ENDPOINT = 'getQuestion';
-
+export const GIRL_CAT_INJECTED = 'GIRL_CAT_INJECTED';
 
 const API_BASE_URL = 'https://rog-api-mock.herokuapp.com/api';
 
@@ -60,4 +66,29 @@ export const enableSpinner = item => ({
 export const disableSpinner = item => ({
   type: COMPONENT_DISABLED_SPINNER,
   item
+});
+
+export const setLocalDetails = data => ({
+  type: LOCAL_DETAILS_SET,
+  data
+});
+
+export const setIsLocalDetailsValid = isValid => ({
+  type: IS_LOCAL_DETAILS_VALID_SET,
+  isValid
+});
+
+export const setLocalQuestion = data => ({
+  type: LOCAL_QUESTION_SET,
+  data
+});
+
+export const setIsLocalQuestionValid = isValid => ({
+  type: IS_LOCAL_QUESTION_VALID_SET,
+  isValid
+});
+
+export const injectGirlCat = girlCat => ({
+  type: GIRL_CAT_INJECTED,
+  girlCat
 });

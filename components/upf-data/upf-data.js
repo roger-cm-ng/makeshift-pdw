@@ -1,58 +1,69 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
+import _ from 'lodash';
 import css from './upf-data.scss';
 import {
   processServerData,
-  DETAILS_SET,
+  setLocalDetails,
+  setIsLocalDetailsValid,
+  setLocalQuestion,
+  setIsLocalQuestionValid,
+  SERVER_DETAILS_SET,
   GET_DETAILS_ENDPOINT,
   SET_DETAILS_ENDPOINT,
-  QUESTION_SET,
+  SERVER_QUESTION_SET,
   GET_QUESTION_ENDPOINT,
   SET_QUESTION_ENDPOINT
 } from './upf-data-actions';
 import ButtonArrow from '../button-arrow/button-arrow';
 import Spinner from '../spinner/spinner';
+import GirlCat from '../girl-cat/girl-cat';
+import { disableGirlCatBtn } from '../girl-cat/girl-cat-actions';
 
 const UpfData = () => {
   const { detailsReducer, questionReducer, spinnerReducer } = useSelector(state => state);
   const dispatch = useDispatch();
-  const [localDetails, setLocalDetails] = useState({});
-  const [localQuestion, setLocalQuestion] = useState({});
-  const [isLocalDetailsValid, setIsLocalDetailsValid] = useState(true);
-  const [isLocalQuestionValid, setIsLocalQuestionValid] = useState(true);
 
   useEffect(() => {
     dispatch(processServerData({
       endPoint: GET_DETAILS_ENDPOINT,
-      type: DETAILS_SET,
+      type: SERVER_DETAILS_SET,
       body: { assignmentId: 'Current' }
     }));
 
     dispatch(processServerData({
       endPoint: GET_QUESTION_ENDPOINT,
-      type: QUESTION_SET,
+      type: SERVER_QUESTION_SET,
       body: { assignmentId: 'Current' }
     }));
   }, []);
 
   const handleLocalDetailsValue = (value) => {
     if (value.error) {
-      setIsLocalDetailsValid(false);
+      dispatch(setIsLocalDetailsValid(false));
     } else {
-      setIsLocalDetailsValid(true);
-      setLocalDetails(JSON.parse(value.json));
+      dispatch(setIsLocalDetailsValid(true));
+      dispatch(setLocalDetails(JSON.parse(value.json)));
     }
   };
 
   const handleLocalQuestionValue = (value) => {
     if (value.error) {
-      setIsLocalQuestionValid(false);
+      dispatch(setIsLocalQuestionValid(false));
     } else {
-      setIsLocalQuestionValid(true);
-      setLocalQuestion(JSON.parse(value.json));
+      dispatch(setIsLocalQuestionValid(true));
+      dispatch(setLocalQuestion(JSON.parse(value.json)));
     }
+  };
+
+  const handleServerToLocal = () => {
+    dispatch(setLocalQuestion(questionReducer.server));
+    dispatch(disableGirlCatBtn(
+      _.get(questionReducer.server, 'nextQuestion.id'),
+      _.get(questionReducer.server, 'nextQuestion.pageId')
+    ));
   };
 
   return (
@@ -67,74 +78,75 @@ const UpfData = () => {
           <p>Local</p>
           <JSONInput
             id="details-edit"
-            placeholder={localDetails}
+            placeholder={detailsReducer.local}
             onChange={value => handleLocalDetailsValue(value)}
             locale={locale}
-            height="400px"
-            width="300px"
+            height="500px"
+            width="450px"
             onKeyPressUpdate={false}
           />
         </div>
         <ButtonArrow
           callBack={() => dispatch(processServerData({
             endPoint: SET_DETAILS_ENDPOINT,
-            type: DETAILS_SET,
-            body: localDetails
+            type: SERVER_DETAILS_SET,
+            body: detailsReducer.local
           }))}
-          disabled={!isLocalDetailsValid}
+          disabled={!detailsReducer.isLocalValid}
         />
         <div className={css['editor-panel']}>
           <div
             className={css['invisible-btn']}
-            onClick={() => setLocalDetails(detailsReducer)}
+            onClick={() => dispatch(setLocalDetails(detailsReducer.server))}
           />
           <p>Server</p>
           <JSONInput
             id="details-view"
-            placeholder={detailsReducer}
+            placeholder={detailsReducer.server}
             locale={locale}
-            height="400px"
-            width="300px"
+            height="500px"
+            width="450px"
             viewOnly
           />
         </div>
       </div>
 
       <h2>Question data</h2>
-      <p>Available GiRL|CAT IDs on QA env - GiRL018220 | 10158, GiRL018216 | 10154, GiRL018221 | 10159, GiRL018218 | 10156, GiRL018222 | 10160, GiRL018219 | 10157, GiRL018269 | 10203, GiRL018270 | 10204, GiRL018271 | 10205, GiRL018272 | 10206</p>
+      <p>Available GiRL|CAT IDs on QA env</p>
+      <GirlCat />
       <div className={css.question}>
         <div className={css['editor-panel']}>
           <p>Local</p>
           <JSONInput
             id="question-edit"
-            placeholder={localQuestion}
+            placeholder={questionReducer.local}
             onChange={value => handleLocalQuestionValue(value)}
             locale={locale}
-            height="400px"
-            width="300px"
+            height="500px"
+            width="450px"
             onKeyPressUpdate={false}
           />
         </div>
         <ButtonArrow
           callBack={() => dispatch(processServerData({
             endPoint: SET_QUESTION_ENDPOINT,
-            type: QUESTION_SET,
-            body: localQuestion
+            type: SERVER_QUESTION_SET,
+            body: questionReducer.local
           }))}
-          disabled={!isLocalQuestionValid}
+          disabled={!questionReducer.isLocalValid}
         />
         <div className={css['editor-panel']}>
           <div
             className={css['invisible-btn']}
-            onClick={() => setLocalQuestion(questionReducer)}
+            onClick={handleServerToLocal}
           />
           <p>Server</p>
           <JSONInput
             id="question-view"
-            placeholder={questionReducer}
+            placeholder={questionReducer.server}
             locale={locale}
-            height="400px"
-            width="300px"
+            height="500px"
+            width="450px"
             viewOnly
           />
         </div>
