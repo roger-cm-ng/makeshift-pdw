@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 import index from './routes/index';
 import api from './routes/api';
 
-const port = 3000;
+const port = 2000;
 const app = express();
 const server = http.Server(app);
 
