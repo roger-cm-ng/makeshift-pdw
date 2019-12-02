@@ -1,11 +1,13 @@
 import _ from 'lodash';
 import {
   GIRL_CAT_ENABLED,
-  GIRL_CAT_BTN_DISABLED
+  GIRL_CAT_BTN_DISABLED,
+  ENV_CHOSEN
 } from './girl-cat-actions';
-import json from './girl-cat.json';
+import jsonQa from './girl-cat-qa.json';
+import jsonLive from './girl-cat-live.json';
 
-const initialState = json;
+const initialState = jsonQa;
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -29,6 +31,16 @@ export default (state = initialState, action) => {
         return item;
       });
       return cloned;
+    }
+
+    case ENV_CHOSEN: {
+      let data;
+      if (action.env === 'Live') {
+        data = jsonLive;
+      } else {
+        data = jsonQa;
+      }
+      return data;
     }
 
     default:

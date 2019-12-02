@@ -22,7 +22,7 @@ import {
 import ButtonArrow from '../button-arrow/button-arrow';
 import Spinner from '../spinner/spinner';
 import GirlCat from '../girl-cat/girl-cat';
-import { disableGirlCatBtn } from '../girl-cat/girl-cat-actions';
+import { disableGirlCatBtn, chooseEnv } from '../girl-cat/girl-cat-actions';
 import Members from '../members/members';
 
 const UpfData = () => {
@@ -141,7 +141,18 @@ const UpfData = () => {
             </div>
 
             <h2>Question data</h2>
-            <p>Available GiRL|CAT IDs on QA env</p>
+            <p className={css['available-girl-cat']}>
+              Available GiRL|CAT IDs on
+              &nbsp;
+              <select
+                onChange={evt => dispatch(chooseEnv(evt.target.value))}
+              >
+                <option>QA</option>
+                <option>Live</option>
+              </select>
+              &nbsp;
+              env
+            </p>
             <GirlCat />
             <div className={css.question}>
               <div className={css['editor-panel']}>
