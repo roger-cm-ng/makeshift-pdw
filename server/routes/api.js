@@ -75,7 +75,7 @@ Api.post('/setQuestion', (req, res) => {
   res.status(200).json(session[req.body.member].currentQuestion);
 });
 
-Api.get('/error/:code', (req, res) => {
+Api.post('/error/:code', (req, res) => {
   res.status(Number(req.params.code)).json({ err: Number(req.params.code) });
 });
 
