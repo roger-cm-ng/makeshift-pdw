@@ -20,6 +20,7 @@ export const COMPONENT_DISABLED_SPINNER = 'COMPONENT_DISABLED_SPINNER';
 export const GIRL_CAT_INJECTED = 'GIRL_CAT_INJECTED';
 
 const API_BASE_URL = 'https://rog-api-mock.herokuapp.com/api';
+// const API_BASE_URL = 'http://localhost:2000/api';
 
 export const processServerData = ({
   endPoint,
