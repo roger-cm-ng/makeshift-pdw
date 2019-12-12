@@ -57,7 +57,7 @@ Api.post('/getQuestion', (req, res) => {
   res.status(200).json(processQuestion(req.body.assignmentId));
 });
 
-Api.post('/saveQuestion', (req, res) => {
+Api.post('/saveQuestionResult', (req, res) => {
   res.status(200).json(processQuestion(req.body.assignmentId));
 });
 
