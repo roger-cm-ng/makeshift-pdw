@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import index from './routes/index';
 import api from './routes/api';
-import mock from './routes/mock';
 
 const port = 1220;
 const app = express();
@@ -26,7 +25,6 @@ app.set('view engine', 'ejs');
 
 app.use('/', index);
 app.use('/api', api);
-app.use('/mock', mock);
 
 server.listen(app.get('port'), app.get('ip'), () => {
   console.log(`Server is running on port ${port}`);
