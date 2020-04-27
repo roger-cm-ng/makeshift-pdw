@@ -309,8 +309,134 @@
   },
   "members": {
     "er": {
-      "allAssessments": {},
-      "classrooms": [],
+      "allAssessments": {
+        "curriculums": [
+          {
+            "curriculumName": "Canada Curriculum",
+            "curriculumId": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
+            "assessments": [
+              {
+                "id": 1,
+                "version": 1,
+                "name": "AUS Curriculum Year 2"
+              },
+              {
+                "id": 2,
+                "version": 1,
+                "name": "AUS Curriculum Year 3"
+              },
+              {
+                "id": 3,
+                "version": 1,
+                "name": "AUS Curriculum Year 4"
+              },
+              {
+                "id": 4,
+                "version": 1,
+                "name": "Naplan - Year 3"
+              }
+            ]
+          },
+          {
+            "curriculumName": "Common Core Standards",
+            "curriculumId": "024ef250-f10b-4cb2-bce9-c434a611956b",
+            "assessments": [
+              {
+                "id": 5,
+                "version": 1,
+                "name": "Grade 1"
+              },
+              {
+                "id": 6,
+                "version": 1,
+                "name": "Grade 2"
+              },
+              {
+                "id": 7,
+                "version": 1,
+                "name": "Grade 4"
+              }
+            ]
+          }
+        ],
+        "assessmentTypes": [
+          {
+            "id": 1,
+            "name": "Pre-test"
+          },
+          {
+            "id": 2,
+            "name": "Post-test"
+          },
+          {
+            "id": 3,
+            "name": "Snapshot check"
+          },
+          {
+            "id": 4,
+            "name": "Standardised test"
+          },
+          {
+            "id": 5,
+            "name": "Custom test"
+          }
+        ]
+      },
+      "classrooms": [
+        {
+          "id": 1,
+          "name": "Room 600",
+          "groups": [
+            {
+              "id": 1,
+              "name": "Sharks",
+              "students": [
+                {
+                  "profileId": 1254,
+                  "firstName": "Roger",
+                  "lastName": "N"
+                },
+                {
+                  "profileId": 1255,
+                  "firstName": "Nancy",
+                  "lastName": "S"
+                },
+                {
+                  "profileId": 1255,
+                  "firstName": "Easwar",
+                  "lastName": "R"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Tigers",
+              "students": [
+                {
+                  "profileId": 1257,
+                  "firstName": "Ranjini",
+                  "lastName": "A"
+                },
+                {
+                  "profileId": 1258,
+                  "firstName": "Godfrey",
+                  "lastName": "T"
+                },
+                {
+                  "profileId": 1259,
+                  "firstName": "Vivek",
+                  "lastName": "A"
+                },
+                {
+                  "profileId": 1256,
+                  "firstName": "Sergii",
+                  "lastName": "M"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "oneAssessment": {},
       "getAssignments": {},
       "assignAssessment": {}
@@ -420,7 +546,7 @@
       "classrooms": [
         {
           "id": 1,
-          "name": "Room 4",
+          "name": "Room 400",
           "groups": [
             {
               "id": 1,

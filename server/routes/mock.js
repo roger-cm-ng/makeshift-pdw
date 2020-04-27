@@ -13,9 +13,9 @@ const Mock = express.Router();
 
 Mock.use(cors());
 
-export const getValueFromReferer = (referer, key) => {
-  const queryParams = referer;
-  const query = queryParams.replace('?', '');
+export const getValueFromReferer = (refererUrl, key) => {
+  const queryParams = refererUrl;
+  const query = queryParams.replace('?', '&');
   const params = queryString.parse(query);
   return params[key];
 };
