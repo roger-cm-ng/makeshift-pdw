@@ -6,8 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { BrowserRouter as Router /* , Route */} from 'react-router-dom';
 import ReloadCombinedReducers from './reload-combined-reducers';
-import { handleDefaults } from '../helpers/utils';
-import UpfData from '../upf-data/upf-data';
+import { handleDefaults } from '../../helpers/utils';
+import Main from '../main/main';
 import './core.scss';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
@@ -30,7 +30,7 @@ export default class EntryApp {
       <Provider store={store}>
         <Router>
           <div>
-            <UpfData />
+            <Main />
           </div>
         </Router>
       </Provider>,

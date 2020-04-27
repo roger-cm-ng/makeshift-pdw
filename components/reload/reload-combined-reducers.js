@@ -1,16 +1,12 @@
 import { combineReducers } from 'redux';
-import detailsReducer from '../upf-data/details-reducer';
-import questionReducer from '../upf-data/question-reducer';
-import spinnerReducer from '../upf-data/spinner-reducer';
-import girlCatReducer from '../girl-cat/girl-cat-reducer';
+import spinnerReducer from '../main/spinner-reducer';
 import membersReducer from '../members/members-reducer';
+import editorReducer from '../editor/editor-reducer';
 
 const ReloadCombinedReducers = combineReducers({
-  detailsReducer,
-  questionReducer,
   spinnerReducer,
-  girlCatReducer,
-  membersReducer
+  membersReducer,
+  editorReducer
 });
 
 export default ReloadCombinedReducers;

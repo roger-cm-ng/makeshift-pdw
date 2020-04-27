@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {
   COMPONENT_ENABLED_SPINNER,
   COMPONENT_DISABLED_SPINNER
-} from './upf-data-actions';
+} from './main-actions';
 
 const initialState = [];
 

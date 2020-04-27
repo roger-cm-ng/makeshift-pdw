@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import css from './members.scss';
-import { chooseMember } from './members-actions';
+import { chooseMember, acquireMembers } from './members-actions';
 
 const Members = () => {
   const { membersReducer } = useSelector(state => state);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(acquireMembers());
+  }, []);
 
   return (
     <div className={css.members}>

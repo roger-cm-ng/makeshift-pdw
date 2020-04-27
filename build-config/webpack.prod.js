@@ -4,7 +4,7 @@ const webpackMerge = require('webpack-merge');
 const CommonConfig = require('./webpack.common');
 const commons = require('./commons');
 
-const baseUrl = 'https://scrum-cards.herokuapp.com';
+const baseUrl = 'https://assessments-assign.herokuapp.com/';
 
 module.exports = webpackMerge(CommonConfig, {
     output: {

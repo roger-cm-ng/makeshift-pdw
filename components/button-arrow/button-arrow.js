@@ -6,25 +6,27 @@ import css from './button-arrow.scss';
 const ButtonArrow = ({
   callBack,
   className,
-  disabled
+  disabled,
+  arrowDirection = 'right'
 }) => (
   <button
       className={classNames(
         css['button-arrow'],
-        className
+        className || ''
       )}
       type="button"
       onClick={callBack}
       disabled={disabled}
   >
-      =&gt;
+    {arrowDirection === 'right' ? '→' : '←'}
   </button>
   );
 
 ButtonArrow.propTypes = {
   callBack: PropTypes.func,
   className: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  arrowDirection: PropTypes.string
 };
 
 export default ButtonArrow;

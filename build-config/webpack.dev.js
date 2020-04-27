@@ -3,7 +3,7 @@ const webpackMerge = require('webpack-merge');
 const CommonConfig = require('./webpack.common');
 const commons = require('./commons');
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:1220';
 
 module.exports = webpackMerge(CommonConfig, {
     watch: true,

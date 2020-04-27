@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import randomColor from 'randomcolor';
-import { MEMBER_CHOSEN } from './members-actions';
-import { MEMBERS_ACQUIRED } from '../upf-data/upf-data-actions';
+import { MEMBER_CHOSEN, MEMBERS_ACQUIRED } from './members-actions';
 
 const initialState = {
   members: [],
@@ -14,7 +13,7 @@ export default (state = initialState, action) => {
       const cloned = _.clone(state);
       const members = [];
 
-      action.data.forEach((member) => {
+      action.payload.forEach((member) => {
         const obj = {};
         obj.member = member;
         obj.enabled = false;

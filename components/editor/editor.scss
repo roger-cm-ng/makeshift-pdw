@@ -1,0 +1,26 @@
+.editor {
+  .panel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: lavender;
+
+    .editor-panel {
+      margin: 10px;
+      position: relative;
+
+      * {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.top-arrow-btn {
+  margin-bottom: 20px;
+}
+
+:global(#details-view-body),
+:global(#question-view-body) {
+  background-color: rgb(20, 0, 68) !important;
+}
