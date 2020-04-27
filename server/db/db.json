@@ -385,7 +385,7 @@
       "classrooms": [
         {
           "id": 1,
-          "name": "Room 600",
+          "name": "Room 1200",
           "groups": [
             {
               "id": 1,
@@ -437,8 +437,135 @@
           ]
         }
       ],
-      "oneAssessment": {},
-      "getAssignments": {},
+      "oneAssessment": {
+        "assessmentId": 1,
+        "name": "Year 12 NAPLAN Calculator Practice (Medium)",
+        "productId": 1,
+        "countryCode": "AUS",
+        "status": 0,
+        "dateModified": "2020-04-15T00:00:00Z",
+        "yearGroups": [
+          {
+            "yearGroupEnum": "7",
+            "longName": "Year 7",
+            "shortName": "7"
+          }
+        ],
+        "relatedCurriculums": [
+          {
+            "curriculumId": "036cdc73-8637-4a8c-8215-125f33aec689",
+            "curriculumName": "Western Australian Curriculum"
+          },
+          {
+            "curriculumId": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
+            "curriculumName": "Australian Curriculum"
+          }
+        ],
+        "topics": [
+          {
+            "id": 1,
+            "name": "Number and Algebra",
+            "code": "",
+            "curriculumLevelCode": "",
+            "strand": "MNA",
+            "type": "strand",
+            "questions": [
+              {
+                "domain": "Number and Algebra",
+                "code": "ACMNA180",
+                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
+                "type": "question",
+                "resources": {
+                  "girlId": "GiRL000001",
+                  "spineId": "MNA05NUT005"
+                }
+              },
+              {
+                "domain": "Number and Algebra",
+                "code": "ACMNA180",
+                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
+                "type": "question",
+                "resources": {
+                  "girlId": "GiRL000002",
+                  "spineId": "MNA05NUT005"
+                }
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Measurement and Geometry",
+            "code": "",
+            "curriculumLevelCode": "",
+            "strand": "MNA",
+            "type": "strand",
+            "questions": [
+              {
+                "domain": "Measurement and Geometry",
+                "code": "ACMMG143",
+                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
+                "type": "question",
+                "resources": {
+                  "girlId": "GiRL000004",
+                  "spineId": "MNA05NUT005"
+                }
+              },
+              {
+                "domain": "Measurement and Geometry",
+                "code": "ACMMG139",
+                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
+                "type": "question",
+                "resources": {
+                  "girlId": "GiRL000005",
+                  "spineId": "MNA05NUT005"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "getAssignments": {
+        "isInProgress": true,
+        "isExpired": false,
+        "results": [
+          {
+            "profileId": 1259,
+            "handedIn": true,
+            "assignmentId": "8d6221d5-3910-4a49-a025-15ac18984ea7",
+            "correct": [
+              "Girl0123",
+              "Girl0124",
+              "Girl0125"
+            ],
+            "incorrect": [
+              "Girl0118",
+              "Girl0117"
+            ],
+            "notAttempted": [
+              "Girl0126",
+              "Girl0126"
+            ]
+          },
+          {
+            "profileId": 1254,
+            "handedIn": true,
+            "assignmentId": "10bb47a0-736e-4e5f-94e7-d91b5b33f807",
+            "correct": [
+              "Girl0123",
+              "Girl0124"
+            ],
+            "incorrect": [
+              "Girl0118"
+            ],
+            "notAttempted": [
+              "Girl0117",
+              "Girl0126",
+              "Girl0126",
+              "Girl0125"
+            ]
+          }
+        ]
+      },
       "assignAssessment": {}
     },
     "sm": {
