@@ -21,7 +21,7 @@ const Main = () => {
       endPointKey: 'classrooms'
     },
     {
-      title: 'GET /assessments/{id}/version/{version}',
+      title: 'GET /assessments/{id}/versions/{version}',
       endPointKey: 'oneAssessment'
     },
     {
