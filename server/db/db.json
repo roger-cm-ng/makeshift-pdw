@@ -3,8 +3,8 @@
     "allAssessments": {
       "curriculums": [
         {
-          "curriculumName": "Australian Curriculum",
-          "curriculumId": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
+          "name": "Australian Curriculum",
+          "id": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
           "assessments": [
             {
               "id": 1,
@@ -29,8 +29,8 @@
           ]
         },
         {
-          "curriculumName": "Common Core Standards",
-          "curriculumId": "024ef250-f10b-4cb2-bce9-c434a611956b",
+          "name": "Common Core Standards",
+          "id": "024ef250-f10b-4cb2-bce9-c434a611956b",
           "assessments": [
             {
               "id": 5,
@@ -83,17 +83,17 @@
             "name": "Sharks",
             "students": [
               {
-                "profileId": 1254,
+                "id": 1254,
                 "firstName": "Roger",
                 "lastName": "N"
               },
               {
-                "profileId": 1255,
+                "id": 1255,
                 "firstName": "Nancy",
                 "lastName": "S"
               },
               {
-                "profileId": 1255,
+                "id": 1255,
                 "firstName": "Easwar",
                 "lastName": "R"
               }
@@ -104,22 +104,22 @@
             "name": "Tigers",
             "students": [
               {
-                "profileId": 1257,
+                "id": 1257,
                 "firstName": "Ranjini",
                 "lastName": "A"
               },
               {
-                "profileId": 1258,
+                "id": 1258,
                 "firstName": "Godfrey",
                 "lastName": "T"
               },
               {
-                "profileId": 1259,
+                "id": 1259,
                 "firstName": "Vivek",
                 "lastName": "A"
               },
               {
-                "profileId": 1256,
+                "id": 1256,
                 "firstName": "Sergii",
                 "lastName": "M"
               }
@@ -600,8 +600,8 @@
       "allAssessments": {
         "curriculums": [
           {
-            "curriculumName": "Australian Curriculum",
-            "curriculumId": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
+            "name": "Australian Curriculum",
+            "id": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
             "assessments": [
               {
                 "id": 1,
@@ -626,8 +626,8 @@
             ]
           },
           {
-            "curriculumName": "Common Core Standards",
-            "curriculumId": "024ef250-f10b-4cb2-bce9-c434a611956b",
+            "name": "Common Core Standards",
+            "id": "024ef250-f10b-4cb2-bce9-c434a611956b",
             "assessments": [
               {
                 "id": 5,
@@ -673,24 +673,24 @@
       "classrooms": [
         {
           "id": 1,
-          "name": "Room 400",
+          "name": "Room 4",
           "groups": [
             {
               "id": 1,
               "name": "Sharks",
               "students": [
                 {
-                  "profileId": 1254,
+                  "id": 1254,
                   "firstName": "Roger",
                   "lastName": "N"
                 },
                 {
-                  "profileId": 1255,
+                  "id": 1255,
                   "firstName": "Nancy",
                   "lastName": "S"
                 },
                 {
-                  "profileId": 1255,
+                  "id": 1255,
                   "firstName": "Easwar",
                   "lastName": "R"
                 }
@@ -701,22 +701,22 @@
               "name": "Tigers",
               "students": [
                 {
-                  "profileId": 1257,
+                  "id": 1257,
                   "firstName": "Ranjini",
                   "lastName": "A"
                 },
                 {
-                  "profileId": 1258,
+                  "id": 1258,
                   "firstName": "Godfrey",
                   "lastName": "T"
                 },
                 {
-                  "profileId": 1259,
+                  "id": 1259,
                   "firstName": "Vivek",
                   "lastName": "A"
                 },
                 {
-                  "profileId": 1256,
+                  "id": 1256,
                   "firstName": "Sergii",
                   "lastName": "M"
                 }
