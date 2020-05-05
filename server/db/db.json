@@ -129,86 +129,86 @@
       }
     ],
     "oneAssessment": {
-      "assessmentId": 1,
-      "name": "Year 7 NAPLAN Calculator Practice (Medium)",
-      "productId": 1,
-      "countryCode": "AUS",
-      "status": 0,
-      "dateModified": "2020-04-15T00:00:00Z",
-      "yearGroups": [
+      "assessmentId":1,
+      "name":"Year 7 NAPLAN Calculator Practice (Medium)",
+      "productId":1,
+      "countryCode":"AUS",
+      "status":0,
+      "dateModified":"2020-04-15T00:00:00Z",
+      "yearGroups":[
         {
-          "yearGroupEnum": "7",
-          "longName": "Year 7",
-          "shortName": "7"
+          "yearGroupEnum":"7",
+          "longName":"Year 7",
+          "shortName":"7"
         }
       ],
-      "relatedCurriculums": [
+      "relatedCurriculums":[
         {
-          "curriculumId": "036cdc73-8637-4a8c-8215-125f33aec689",
-          "curriculumName": "Western Australian Curriculum"
+          "curriculumId":"036cdc73-8637-4a8c-8215-125f33aec689",
+          "curriculumName":"Western Australian Curriculum"
         },
         {
-          "curriculumId": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-          "curriculumName": "Australian Curriculum"
+          "curriculumId":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
+          "curriculumName":"Australian Curriculum"
         }
       ],
-      "topics": [
+      "topics":[
         {
-          "id": 1,
-          "name": "Number and Algebra",
-          "code": "",
-          "curriculumLevelCode": "",
-          "strand": "MNA",
-          "type": "strand",
-          "questions": [
+          "id":2,
+          "name":"Number and Algebra",
+          "code":"",
+          "curriculumLevelCode":"",
+          "strand":"MNA",
+          "type":"strand",
+          "questions":[
             {
-              "domain": "Number and Algebra",
-              "code": "ACMNA180",
-              "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-              "type": "question",
-              "resources": {
-                "girlId": "GiRL000001",
-                "spineId": "MNA05NUT005"
+              "domain":"Number and Algebra",
+              "code":"ACMNA180",
+              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
+              "type":"question",
+              "resources":{
+                "girlId":"GiRL000001",
+                "spineId":"MNA05NUT005"
               }
             },
             {
-              "domain": "Number and Algebra",
-              "code": "ACMNA190",
-              "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b23",
-              "type": "question",
-              "resources": {
-                "girlId": "GiRL000002",
-                "spineId": "MNA05NUT005"
+              "domain":"Number and Algebra",
+              "code":"ACMNA190",
+              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b23",
+              "type":"question",
+              "resources":{
+                "girlId":"GiRL000002",
+                "spineId":"MNA05NUT005"
               }
             }
           ]
         },
         {
-          "id": 1,
-          "name": "Measurement and Geometry",
-          "code": "",
-          "curriculumLevelCode": "",
-          "strand": "MNA",
-          "type": "strand",
-          "questions": [
+          "id":1,
+          "name":"Measurement and Geometry",
+          "code":"",
+          "curriculumLevelCode":"",
+          "strand":"MNA",
+          "type":"strand",
+          "questions":[
             {
-              "domain": "Measurement and Geometry",
-              "code": "ACMMG143",
-              "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-              "type": "question",
-              "resources": {
-                "girlId": "GiRL000004",
-                "spineId": "MNA05NUT005"
+              "domain":"Measurement and Geometry",
+              "code":"ACMMG143",
+              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
+              "type":"question",
+              "resources":{
+                "girlId":"GiRL000004",
+                "spineId":"MNA05NUT005"
               }
             },
             {
-              "domain": "Measurement and Geometry",
-              "code": "ACMMG139",
-              "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-              "type": "question",
-              "resources": {
-                "girlId": "GiRL000005",
-                "spineId": "MNA05NUT005"
+              "domain":"Measurement and Geometry",
+              "code":"ACMMG139",
+              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
+              "type":"question",
+              "resources":{
+                "girlId":"GiRL000005",
+                "spineId":"MNA05NUT005"
               }
             }
           ]
