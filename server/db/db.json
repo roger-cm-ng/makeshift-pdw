@@ -354,43 +354,22 @@
       ]
     },
     "getAssignments": {
-      "isInProgress": true,
-      "isExpired": false,
-      "results": [
+      "isInProgress":true,
+      "isExpired":false,
+      "results":[
         {
-          "profileId": 1253,
-          "handedIn": true,
-          "assignmentId": "8d6221d5-3910-4a49-a025-15ac18984ea7",
-          "correct": [
-            "Girl0123",
-            "Girl0124",
-            "Girl0125"
+          "profileId":371,
+          "handedIn":true,
+          "assignmentId":"10bb47a0-736e-4e5f-94e7-d91b5b33f807",
+          "correct":[
+            "GiRL000002",
+            "GiRL000004"
           ],
-          "incorrect": [
-            "Girl0118",
-            "Girl0117"
+          "incorrect":[
+            "GiRL000001"
           ],
-          "notAttempted": [
-            "Girl0126",
-            "Girl0127"
-          ]
-        },
-        {
-          "profileId": 1254,
-          "handedIn": true,
-          "assignmentId": "10bb47a0-736e-4e5f-94e7-d91b5b33f807",
-          "correct": [
-            "Girl0123",
-            "Girl0124"
-          ],
-          "incorrect": [
-            "Girl0118"
-          ],
-          "notAttempted": [
-            "Girl0117",
-            "Girl0126",
-            "Girl0130",
-            "Girl0125"
+          "notAttempted":[
+            "GiRL000005"
           ]
         }
       ]
