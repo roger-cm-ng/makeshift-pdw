@@ -75,53 +75,180 @@
     },
     "classrooms": [
       {
-        "id": 1000,
-        "name": "Room 4",
-        "groups": [
+        "id":60,
+        "name":"Voyager Literacy Alpha",
+        "groups":[
           {
-            "id": 1,
-            "name": "Sharks",
-            "students": [
+            "id":1,
+            "name":"Voyager Literacy Alpha *",
+            "students":[
               {
-                "id": 1254,
-                "firstName": "Roger",
-                "lastName": "N"
+                "id":370,
+                "firstName":"Voyager",
+                "lastName":"Test Student"
               },
               {
-                "id": 1255,
-                "firstName": "Nancy",
-                "lastName": "S"
+                "id":371,
+                "firstName":"Deb",
+                "lastName":"Test Student"
               },
               {
-                "id": 1256,
-                "firstName": "Easwar",
-                "lastName": "R"
+                "id":372,
+                "firstName":"Martan",
+                "lastName":"Test Student"
+              },
+              {
+                "id":373,
+                "firstName":"Suchi",
+                "lastName":"Test Student"
               }
             ]
           },
           {
-            "id": 2,
-            "name": "Tigers",
-            "students": [
+            "id":2,
+            "name":"Voyager Literacy Delta",
+            "students":[
               {
-                "id": 1257,
-                "firstName": "Ranjini",
-                "lastName": "A"
+                "id":374,
+                "firstName":"Tariq",
+                "lastName":"Test Student"
               },
               {
-                "id": 1258,
-                "firstName": "Godfrey",
-                "lastName": "T"
+                "id":375,
+                "firstName":"Vin",
+                "lastName":"Test Student"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":61,
+        "name":"Voyager Literacy Beta",
+        "groups":[
+          {
+            "id":1,
+            "name":"Voyager Literacy Beta *",
+            "students":[
+              {
+                "id":370,
+                "firstName":"Voyager",
+                "lastName":"Test Student"
               },
               {
-                "id": 1259,
-                "firstName": "Vivek",
-                "lastName": "A"
+                "id":371,
+                "firstName":"Deb",
+                "lastName":"Test Student"
               },
               {
-                "id": 1260,
-                "firstName": "Sergii",
-                "lastName": "M"
+                "id":372,
+                "firstName":"Martan",
+                "lastName":"Test Student"
+              },
+              {
+                "id":373,
+                "firstName":"Suchi",
+                "lastName":"Test Student"
+              },
+              {
+                "id":374,
+                "firstName":"Tariq",
+                "lastName":"Test Student"
+              },
+              {
+                "id":375,
+                "firstName":"Vin",
+                "lastName":"Test Student"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":58,
+        "name":"Voyager Maths 1",
+        "groups":[
+          {
+            "id":1,
+            "name":"Voyager Maths 1 *",
+            "students":[
+              {
+                "id":370,
+                "firstName":"Voyager",
+                "lastName":"Test Student"
+              },
+              {
+                "id":371,
+                "firstName":"Deb",
+                "lastName":"Test Student"
+              },
+              {
+                "id":372,
+                "firstName":"Martan",
+                "lastName":"Test Student"
+              },
+              {
+                "id":373,
+                "firstName":"Suchi",
+                "lastName":"Test Student"
+              }
+            ]
+          },
+          {
+            "id":2,
+            "name":"Voyager Maths 1 Advance",
+            "students":[
+              {
+                "id":374,
+                "firstName":"Tariq",
+                "lastName":"Test Student"
+              },
+              {
+                "id":375,
+                "firstName":"Vin",
+                "lastName":"Test Student"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":59,
+        "name":"Voyager Maths 2",
+        "groups":[
+          {
+            "id":1,
+            "name":"Voyager Maths 2 *",
+            "students":[
+              {
+                "id":370,
+                "firstName":"Voyager",
+                "lastName":"Test Student"
+              },
+              {
+                "id":371,
+                "firstName":"Deb",
+                "lastName":"Test Student"
+              },
+              {
+                "id":372,
+                "firstName":"Martan",
+                "lastName":"Test Student"
+              },
+              {
+                "id":373,
+                "firstName":"Suchi",
+                "lastName":"Test Student"
+              },
+              {
+                "id":374,
+                "firstName":"Tariq",
+                "lastName":"Test Student"
+              },
+              {
+                "id":375,
+                "firstName":"Vin",
+                "lastName":"Test Student"
               }
             ]
           }
@@ -131,6 +258,7 @@
     "oneAssessment": {
       "assessmentId":1,
       "name":"Year 7 NAPLAN Calculator Practice (Medium)",
+      "version":0,
       "productId":1,
       "countryCode":"AUS",
       "status":0,
@@ -143,6 +271,16 @@
         }
       ],
       "relatedCurriculums":[
+        {
+          "curriculumId":"036cdc73-8637-4a8c-8215-125f33aec689",
+          "curriculumName":"Western Australian Curriculum"
+        },
+        {
+          "curriculumId":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
+          "curriculumName":"Australian Curriculum"
+        }
+      ],
+      "referenceCurriculum":[
         {
           "curriculumId":"036cdc73-8637-4a8c-8215-125f33aec689",
           "curriculumName":"Western Australian Curriculum"
