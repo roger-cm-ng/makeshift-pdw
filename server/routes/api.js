@@ -16,10 +16,14 @@ Api.use(cors());
 const members = ['er', 'gt', 'ra', 'ie', 'rn', 'sb'];
 
 const getValueFromReferer = (refererUrl, key) => {
-  const queryParams = refererUrl;
-  const query = queryParams.replace('?', '&');
-  const params = queryString.parse(query);
-  return params[key];
+  let member = 'rn';
+  if (refererUrl) {
+    const queryParams = refererUrl;
+    const query = queryParams.replace('?', '&');
+    const params = queryString.parse(query);
+    member = params[key];
+  }
+  return member;
 };
 
 Api.get('/members', (req, res) => {
@@ -50,19 +54,19 @@ Api.post('/set-default', (req, res) => {
 });
 
 Api.get('/learningTime/productId/:productId/studentId/:studentId', (req, res) => {
-  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi') || 'rn';
+  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi');
 
   res.status(200).json(db.get('members').get(member).get('learningTime').value());
 });
 
 Api.get('/loginGoals/productId/:productId/studentId/:studentId', (req, res) => {
-  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi') || 'rn';
+  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi');
 
   res.status(200).json(db.get('members').get(member).get('loginGoals').value());
 });
 
 Api.get('/studentGoals/productId/:productId/studentId/:studentId/currentWeek/:currentWeek', (req, res) => {
-  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi') || 'rn';
+  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi');
 
   res.status(200).json(db.get('members').get(member).get('studentGoals').value());
 });
