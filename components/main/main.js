@@ -13,24 +13,16 @@ const Main = () => {
 
   const endPointDetails = [
     {
-      title: 'GET /assessments',
-      endPointKey: 'allAssessments'
+      title: 'GET /learningTime/productId/{productId}/studentId/{studentId}',
+      endPointKey: 'learningTime'
     },
     {
-      title: 'GET /classrooms',
-      endPointKey: 'classrooms'
+      title: 'GET /loginGoals/productId/{productId}/studentId/{studentId}',
+      endPointKey: 'loginGoals'
     },
     {
-      title: 'GET /assessments/{id}/versions/{version}',
-      endPointKey: 'oneAssessment'
-    },
-    {
-      title: 'POST /getAssignments',
-      endPointKey: 'getAssignments'
-    },
-    {
-      title: 'POST /assignAssessment',
-      endPointKey: 'assignAssessment'
+      title: 'GET /studentGoals/productId/{productId}/studentId/{studentId}/currentWeek/{currentWeek}',
+      endPointKey: 'studentGoals'
     }
   ];
 

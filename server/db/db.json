@@ -1,1039 +1,146 @@
 {
   "default": {
-    "allAssessments": {
-      "curriculums": [
-        {
-          "name": "Australian Curriculum",
-          "id": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
-          "assessments": [
-            {
-              "id": 1,
-              "version": 1,
-              "name": "AUS Curriculum Year 2"
-            },
-            {
-              "id": 2,
-              "version": 1,
-              "name": "AUS Curriculum Year 3"
-            },
-            {
-              "id": 3,
-              "version": 1,
-              "name": "AUS Curriculum Year 4"
-            },
-            {
-              "id": 4,
-              "version": 1,
-              "name": "Naplan - Year 3"
-            }
-          ]
-        },
-        {
-          "name": "Common Core Standards",
-          "id": "024ef250-f10b-4cb2-bce9-c434a611956b",
-          "assessments": [
-            {
-              "id": 5,
-              "version": 1,
-              "name": "Grade 1"
-            },
-            {
-              "id": 6,
-              "version": 1,
-              "name": "Grade 2"
-            },
-            {
-              "id": 7,
-              "version": 1,
-              "name": "Grade 4"
-            }
-          ]
-        }
-      ],
-      "assessmentTypes": [
-        {
-          "id": 1,
-          "name": "Pre-test"
-        },
-        {
-          "id": 2,
-          "name": "Post-test"
-        },
-        {
-          "id": 3,
-          "name": "Snapshot check"
-        },
-        {
-          "id": 4,
-          "name": "Standardised test"
-        },
-        {
-          "id": 5,
-          "name": "Custom test"
-        }
-      ]
+    "learningTime": {
+      "time": 60,
+      "goal": 180
     },
-    "classrooms": [
-      {
-        "id":60,
-        "name":"Voyager Literacy Alpha",
-        "groups":[
-          {
-            "id":1,
-            "name":"Voyager Literacy Alpha *",
-            "students":[
-              {
-                "id":370,
-                "firstName":"Voyager",
-                "lastName":"Test Student"
-              },
-              {
-                "id":371,
-                "firstName":"Deb",
-                "lastName":"Test Student"
-              },
-              {
-                "id":372,
-                "firstName":"Martan",
-                "lastName":"Test Student"
-              },
-              {
-                "id":373,
-                "firstName":"Suchi",
-                "lastName":"Test Student"
-              }
-            ]
-          },
-          {
-            "id":2,
-            "name":"Voyager Literacy Delta",
-            "students":[
-              {
-                "id":374,
-                "firstName":"Tariq",
-                "lastName":"Test Student"
-              },
-              {
-                "id":375,
-                "firstName":"Vin",
-                "lastName":"Test Student"
-              }
-            ]
-          }
-        ]
+    "loginGoals": {
+      "week": [
+        0,
+        1,
+        1,
+        0,
+        2,
+        3,
+        3
+      ],
+      "streak": 6,
+      "login": 2,
+      "goal": 4
+    },
+    "studentGoals": {
+      "week": {
+        "time": 105,
+        "goal": 180,
+        "maxBar": 30,
+        "overTime": [
+          5,
+          8,
+          10,
+          15,
+          20,
+          22,
+          25
+        ],
+        "currentWeek": 48,
+        "currentYear": 2020
       },
-      {
-        "id":61,
-        "name":"Voyager Literacy Beta",
-        "groups":[
-          {
-            "id":1,
-            "name":"Voyager Literacy Beta *",
-            "students":[
-              {
-                "id":370,
-                "firstName":"Voyager",
-                "lastName":"Test Student"
-              },
-              {
-                "id":371,
-                "firstName":"Deb",
-                "lastName":"Test Student"
-              },
-              {
-                "id":372,
-                "firstName":"Martan",
-                "lastName":"Test Student"
-              },
-              {
-                "id":373,
-                "firstName":"Suchi",
-                "lastName":"Test Student"
-              },
-              {
-                "id":374,
-                "firstName":"Tariq",
-                "lastName":"Test Student"
-              },
-              {
-                "id":375,
-                "firstName":"Vin",
-                "lastName":"Test Student"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id":58,
-        "name":"Voyager Maths 1",
-        "groups":[
-          {
-            "id":1,
-            "name":"Voyager Maths 1 *",
-            "students":[
-              {
-                "id":370,
-                "firstName":"Voyager",
-                "lastName":"Test Student"
-              },
-              {
-                "id":371,
-                "firstName":"Deb",
-                "lastName":"Test Student"
-              },
-              {
-                "id":372,
-                "firstName":"Martan",
-                "lastName":"Test Student"
-              },
-              {
-                "id":373,
-                "firstName":"Suchi",
-                "lastName":"Test Student"
-              }
-            ]
-          },
-          {
-            "id":2,
-            "name":"Voyager Maths 1 Advance",
-            "students":[
-              {
-                "id":374,
-                "firstName":"Tariq",
-                "lastName":"Test Student"
-              },
-              {
-                "id":375,
-                "firstName":"Vin",
-                "lastName":"Test Student"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id":59,
-        "name":"Voyager Maths 2",
-        "groups":[
-          {
-            "id":1,
-            "name":"Voyager Maths 2 *",
-            "students":[
-              {
-                "id":370,
-                "firstName":"Voyager",
-                "lastName":"Test Student"
-              },
-              {
-                "id":371,
-                "firstName":"Deb",
-                "lastName":"Test Student"
-              },
-              {
-                "id":372,
-                "firstName":"Martan",
-                "lastName":"Test Student"
-              },
-              {
-                "id":373,
-                "firstName":"Suchi",
-                "lastName":"Test Student"
-              },
-              {
-                "id":374,
-                "firstName":"Tariq",
-                "lastName":"Test Student"
-              },
-              {
-                "id":375,
-                "firstName":"Vin",
-                "lastName":"Test Student"
-              }
-            ]
-          }
+      "month": {
+        "time": 380,
+        "goal": 720,
+        "maxBar": 480,
+        "overTime": [
+          60,
+          40,
+          20,
+          15,
+          15,
+          20,
+          10,
+          20,
+          40,
+          20,
+          50,
+          70
         ]
       }
-    ],
-    "oneAssessment": {
-      "assessmentId":1,
-      "name":"Year 7 NAPLAN Calculator Practice (Medium)",
-      "version":0,
-      "productId":1,
-      "countryCode":"AUS",
-      "status":0,
-      "dateModified":"2020-04-15T00:00:00Z",
-      "yearGroups":[
-        {
-          "yearGroupEnum":"7",
-          "longName":"Year 7",
-          "shortName":"7"
-        }
-      ],
-      "relatedCurriculums":[
-        {
-          "curriculumId":"036cdc73-8637-4a8c-8215-125f33aec689",
-          "curriculumName":"Western Australian Curriculum"
-        },
-        {
-          "curriculumId":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
-          "curriculumName":"Australian Curriculum"
-        }
-      ],
-      "referenceCurriculum":[
-        {
-          "curriculumId":"036cdc73-8637-4a8c-8215-125f33aec689",
-          "curriculumName":"Western Australian Curriculum"
-        },
-        {
-          "curriculumId":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
-          "curriculumName":"Australian Curriculum"
-        }
-      ],
-      "topics":[
-        {
-          "id":2,
-          "name":"Number and Algebra",
-          "code":"",
-          "curriculumLevelCode":"",
-          "strand":"MNA",
-          "type":"strand",
-          "questions":[
-            {
-              "domain":"Number and Algebra",
-              "code":"ACMNA180",
-              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
-              "type":"question",
-              "resources":{
-                "girlId":"GiRL000001",
-                "spineId":"MNA05NUT005"
-              }
-            },
-            {
-              "domain":"Number and Algebra",
-              "code":"ACMNA190",
-              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b23",
-              "type":"question",
-              "resources":{
-                "girlId":"GiRL000002",
-                "spineId":"MNA05NUT005"
-              }
-            }
-          ]
-        },
-        {
-          "id":1,
-          "name":"Measurement and Geometry",
-          "code":"",
-          "curriculumLevelCode":"",
-          "strand":"MNA",
-          "type":"strand",
-          "questions":[
-            {
-              "domain":"Measurement and Geometry",
-              "code":"ACMMG143",
-              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
-              "type":"question",
-              "resources":{
-                "girlId":"GiRL000004",
-                "spineId":"MNA05NUT005"
-              }
-            },
-            {
-              "domain":"Measurement and Geometry",
-              "code":"ACMMG139",
-              "curriculumLevelCode":"4796fbce-3405-11e0-a302-5f5a9dff4b22",
-              "type":"question",
-              "resources":{
-                "girlId":"GiRL000005",
-                "spineId":"MNA05NUT005"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    "getAssignments": {
-      "isInProgress":true,
-      "isExpired":false,
-      "results":[
-        {
-          "profileId":371,
-          "handedIn":true,
-          "assignmentId":"10bb47a0-736e-4e5f-94e7-d91b5b33f807",
-          "correct":[
-            "GiRL000002",
-            "GiRL000004"
-          ],
-          "incorrect":[
-            "GiRL000001"
-          ],
-          "notAttempted":[
-            "GiRL000005"
-          ]
-        }
-      ]
-    },
-    "assignAssessment": {
-      "isInProgress": true,
-      "isExpired": false,
-      "results": [
-        {
-          "profileId": 1253,
-          "handedIn": false,
-          "assignmentId": "8d6221d5-3910-4a49-a025-15ac18984ea7",
-          "correct": [],
-          "incorrect": [],
-          "notAttempted": [
-            "Girl0117",
-            "Girl0118",
-            "Girl0119",
-            "Girl0120",
-            "Girl0121",
-            "Girl0122"
-          ]
-        },
-        {
-          "profileId": 1254,
-          "handedIn": false,
-          "assignmentId": "10bb47a0-736e-4e5f-94e7-d91b5b33f807",
-          "correct": [],
-          "incorrect": [],
-          "notAttempted": [
-            "Girl0117",
-            "Girl0118",
-            "Girl0119",
-            "Girl0120",
-            "Girl0121"
-          ]
-        },
-        {
-          "profileId": 1255,
-          "handedIn": false,
-          "assignmentId": "e573c953-df69-4e50-b007-9645a8cee20f",
-          "correct": [],
-          "incorrect": [],
-          "notAttempted": [
-            "Girl0117",
-            "Girl0118",
-            "Girl0119",
-            "Girl0120",
-            "Girl0121"
-          ]
-        }
-      ]
     }
   },
   "members": {
     "er": {
-      "allAssessments": {
-        "curriculums": [
-          {
-            "curriculumName": "Canada Curriculum",
-            "curriculumId": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
-            "assessments": [
-              {
-                "id": 1,
-                "version": 1,
-                "name": "AUS Curriculum Year 2"
-              },
-              {
-                "id": 2,
-                "version": 1,
-                "name": "AUS Curriculum Year 3"
-              },
-              {
-                "id": 3,
-                "version": 1,
-                "name": "AUS Curriculum Year 4"
-              },
-              {
-                "id": 4,
-                "version": 1,
-                "name": "Naplan - Year 3"
-              }
-            ]
-          },
-          {
-            "curriculumName": "Common Core Standards",
-            "curriculumId": "024ef250-f10b-4cb2-bce9-c434a611956b",
-            "assessments": [
-              {
-                "id": 5,
-                "version": 1,
-                "name": "Grade 1"
-              },
-              {
-                "id": 6,
-                "version": 1,
-                "name": "Grade 2"
-              },
-              {
-                "id": 7,
-                "version": 1,
-                "name": "Grade 4"
-              }
-            ]
-          }
-        ],
-        "assessmentTypes": [
-          {
-            "id": 1,
-            "name": "Pre-test"
-          },
-          {
-            "id": 2,
-            "name": "Post-test"
-          },
-          {
-            "id": 3,
-            "name": "Snapshot check"
-          },
-          {
-            "id": 4,
-            "name": "Standardised test"
-          },
-          {
-            "id": 5,
-            "name": "Custom test"
-          }
-        ]
+      "learningTime": {
+        "time": 60,
+        "goal": 180
       },
-      "classrooms": [
-        {
-          "id": 1,
-          "name": "Room 1200",
-          "groups": [
-            {
-              "id": 1,
-              "name": "Sharks",
-              "students": [
-                {
-                  "profileId": 1254,
-                  "firstName": "Roger",
-                  "lastName": "N"
-                },
-                {
-                  "profileId": 1255,
-                  "firstName": "Nancy",
-                  "lastName": "S"
-                },
-                {
-                  "profileId": 1255,
-                  "firstName": "Easwar",
-                  "lastName": "R"
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "name": "Tigers",
-              "students": [
-                {
-                  "profileId": 1257,
-                  "firstName": "Ranjini",
-                  "lastName": "A"
-                },
-                {
-                  "profileId": 1258,
-                  "firstName": "Godfrey",
-                  "lastName": "T"
-                },
-                {
-                  "profileId": 1259,
-                  "firstName": "Vivek",
-                  "lastName": "A"
-                },
-                {
-                  "profileId": 1256,
-                  "firstName": "Sergii",
-                  "lastName": "M"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "oneAssessment": {
-        "assessmentId": 1,
-        "name": "Year 12 NAPLAN Calculator Practice (Medium)",
-        "productId": 1,
-        "countryCode": "AUS",
-        "status": 0,
-        "dateModified": "2020-04-15T00:00:00Z",
-        "yearGroups": [
-          {
-            "yearGroupEnum": "7",
-            "longName": "Year 7",
-            "shortName": "7"
-          }
-        ],
-        "relatedCurriculums": [
-          {
-            "curriculumId": "036cdc73-8637-4a8c-8215-125f33aec689",
-            "curriculumName": "Western Australian Curriculum"
-          },
-          {
-            "curriculumId": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-            "curriculumName": "Australian Curriculum"
-          }
-        ],
-        "topics": [
-          {
-            "id": 1,
-            "name": "Number and Algebra",
-            "code": "",
-            "curriculumLevelCode": "",
-            "strand": "MNA",
-            "type": "strand",
-            "questions": [
-              {
-                "domain": "Number and Algebra",
-                "code": "ACMNA180",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000001",
-                  "spineId": "MNA05NUT005"
-                }
-              },
-              {
-                "domain": "Number and Algebra",
-                "code": "ACMNA180",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000002",
-                  "spineId": "MNA05NUT005"
-                }
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "name": "Measurement and Geometry",
-            "code": "",
-            "curriculumLevelCode": "",
-            "strand": "MNA",
-            "type": "strand",
-            "questions": [
-              {
-                "domain": "Measurement and Geometry",
-                "code": "ACMMG143",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000004",
-                  "spineId": "MNA05NUT005"
-                }
-              },
-              {
-                "domain": "Measurement and Geometry",
-                "code": "ACMMG139",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000005",
-                  "spineId": "MNA05NUT005"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "getAssignments": {
-        "isInProgress": true,
-        "isExpired": false,
-        "results": [
-          {
-            "profileId": 1259,
-            "handedIn": true,
-            "assignmentId": "8d6221d5-3910-4a49-a025-15ac18984ea7",
-            "correct": [
-              "Girl0123",
-              "Girl0124",
-              "Girl0125"
-            ],
-            "incorrect": [
-              "Girl0118",
-              "Girl0117"
-            ],
-            "notAttempted": [
-              "Girl0126",
-              "Girl0126"
-            ]
-          },
-          {
-            "profileId": 1254,
-            "handedIn": true,
-            "assignmentId": "10bb47a0-736e-4e5f-94e7-d91b5b33f807",
-            "correct": [
-              "Girl0123",
-              "Girl0124"
-            ],
-            "incorrect": [
-              "Girl0118"
-            ],
-            "notAttempted": [
-              "Girl0117",
-              "Girl0126",
-              "Girl0126",
-              "Girl0125"
-            ]
-          }
-        ]
-      },
-      "assignAssessment": {}
-    },
-    "sm": {
-      "allAssessments": {},
-      "classrooms": [],
-      "oneAssessment": {},
-      "getAssignments": {},
-      "assignAssessment": {}
+      "loginGoals": {},
+      "studentGoals": {}
     },
     "gt": {
-      "allAssessments": {},
-      "classrooms": [],
-      "oneAssessment": {},
-      "getAssignments": {},
-      "assignAssessment": {}
+      "learningTime": {},
+      "loginGoals": {},
+      "studentGoals": {}
     },
     "ra": {
-      "allAssessments": {},
-      "classrooms": [],
-      "oneAssessment": {},
-      "getAssignments": {},
-      "assignAssessment": {}
+      "learningTime": {},
+      "loginGoals": {},
+      "studentGoals": {}
     },
     "ie": {
-      "allAssessments": {},
-      "classrooms": [],
-      "oneAssessment": {},
-      "getAssignments": {},
-      "assignAssessment": {}
+      "learningTime": {},
+      "loginGoals": {},
+      "studentGoals": {}
     },
     "rn": {
-      "allAssessments": {
-        "curriculums": [
-          {
-            "name": "Australian Curriculum",
-            "id": "54a9c84d-77f6-4689-9db0-ee1b85ffdd8e",
-            "assessments": [
-              {
-                "id": 1,
-                "version": 1,
-                "name": "AUS Curriculum Year 2"
-              },
-              {
-                "id": 2,
-                "version": 1,
-                "name": "AUS Curriculum Year 3"
-              },
-              {
-                "id": 3,
-                "version": 1,
-                "name": "AUS Curriculum Year 4"
-              },
-              {
-                "id": 4,
-                "version": 1,
-                "name": "Naplan - Year 3"
-              }
-            ]
-          },
-          {
-            "name": "Common Core Standards",
-            "id": "024ef250-f10b-4cb2-bce9-c434a611956b",
-            "assessments": [
-              {
-                "id": 5,
-                "version": 1,
-                "name": "Grade 1"
-              },
-              {
-                "id": 6,
-                "version": 1,
-                "name": "Grade 2"
-              },
-              {
-                "id": 7,
-                "version": 1,
-                "name": "Grade 4"
-              }
-            ]
-          }
-        ],
-        "assessmentTypes": [
-          {
-            "id": 1,
-            "name": "Pre-test"
-          },
-          {
-            "id": 2,
-            "name": "Post-test"
-          },
-          {
-            "id": 3,
-            "name": "Snapshot check"
-          },
-          {
-            "id": 4,
-            "name": "Standardised test"
-          },
-          {
-            "id": 5,
-            "name": "Custom test"
-          }
-        ]
+      "learningTime": {
+        "time": 6000,
+        "goal": 18000
       },
-      "classrooms": [
-        {
-          "id": 1,
-          "name": "Room 4",
-          "groups": [
-            {
-              "id": 1,
-              "name": "Sharks",
-              "students": [
-                {
-                  "id": 1254,
-                  "firstName": "Roger",
-                  "lastName": "N"
-                },
-                {
-                  "id": 1255,
-                  "firstName": "Nancy",
-                  "lastName": "S"
-                },
-                {
-                  "id": 1255,
-                  "firstName": "Easwar",
-                  "lastName": "R"
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "name": "Tigers",
-              "students": [
-                {
-                  "id": 1257,
-                  "firstName": "Ranjini",
-                  "lastName": "A"
-                },
-                {
-                  "id": 1258,
-                  "firstName": "Godfrey",
-                  "lastName": "T"
-                },
-                {
-                  "id": 1259,
-                  "firstName": "Vivek",
-                  "lastName": "A"
-                },
-                {
-                  "id": 1256,
-                  "firstName": "Sergii",
-                  "lastName": "M"
-                }
-              ]
-            }
+      "loginGoals": {
+        "week": [
+          0,
+          1,
+          1,
+          0,
+          2,
+          3,
+          3
+        ],
+        "streak": 6,
+        "login": 2,
+        "goal": 4
+      },
+      "studentGoals": {
+        "week": {
+          "time": 105,
+          "goal": 180,
+          "maxBar": 30,
+          "overTime": [
+            5,
+            8,
+            10,
+            15,
+            20,
+            22,
+            25
+          ],
+          "currentWeek": 48,
+          "currentYear": 2020
+        },
+        "month": {
+          "time": 380,
+          "goal": 720,
+          "maxBar": 480,
+          "overTime": [
+            60,
+            40,
+            20,
+            15,
+            15,
+            20,
+            10,
+            20,
+            40,
+            20,
+            50,
+            70
           ]
         }
-      ],
-      "oneAssessment": {
-        "assessmentId": 1,
-        "name": "Year 7 NAPLAN Calculator Practice (Medium)",
-        "productId": 1,
-        "countryCode": "AUS",
-        "status": 0,
-        "dateModified": "2020-04-15T00:00:00Z",
-        "yearGroups": [
-          {
-            "yearGroupEnum": "7",
-            "longName": "Year 7",
-            "shortName": "7"
-          }
-        ],
-        "relatedCurriculums": [
-          {
-            "curriculumId": "036cdc73-8637-4a8c-8215-125f33aec689",
-            "curriculumName": "Western Australian Curriculum"
-          },
-          {
-            "curriculumId": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-            "curriculumName": "Australian Curriculum"
-          }
-        ],
-        "topics": [
-          {
-            "id": 1,
-            "name": "Number and Algebra",
-            "code": "",
-            "curriculumLevelCode": "",
-            "strand": "MNA",
-            "type": "strand",
-            "questions": [
-              {
-                "domain": "Number and Algebra",
-                "code": "ACMNA180",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000001",
-                  "spineId": "MNA05NUT005"
-                }
-              },
-              {
-                "domain": "Number and Algebra",
-                "code": "ACMNA180",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000002",
-                  "spineId": "MNA05NUT005"
-                }
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "name": "Measurement and Geometry",
-            "code": "",
-            "curriculumLevelCode": "",
-            "strand": "MNA",
-            "type": "strand",
-            "questions": [
-              {
-                "domain": "Measurement and Geometry",
-                "code": "ACMMG143",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000004",
-                  "spineId": "MNA05NUT005"
-                }
-              },
-              {
-                "domain": "Measurement and Geometry",
-                "code": "ACMMG139",
-                "curriculumLevelCode": "4796fbce-3405-11e0-a302-5f5a9dff4b22",
-                "type": "question",
-                "resources": {
-                  "girlId": "GiRL000005",
-                  "spineId": "MNA05NUT005"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "getAssignments": {
-        "isInProgress": true,
-        "isExpired": false,
-        "results": [
-          {
-            "profileId": 1253,
-            "handedIn": true,
-            "assignmentId": "8d6221d5-3910-4a49-a025-15ac18984ea7",
-            "correct": [
-              "Girl0123",
-              "Girl0124",
-              "Girl0125"
-            ],
-            "incorrect": [
-              "Girl0118",
-              "Girl0117"
-            ],
-            "notAttempted": [
-              "Girl0126",
-              "Girl0126"
-            ]
-          },
-          {
-            "profileId": 1254,
-            "handedIn": true,
-            "assignmentId": "10bb47a0-736e-4e5f-94e7-d91b5b33f807",
-            "correct": [
-              "Girl0123",
-              "Girl0124"
-            ],
-            "incorrect": [
-              "Girl0118"
-            ],
-            "notAttempted": [
-              "Girl0117",
-              "Girl0126",
-              "Girl0126",
-              "Girl0125"
-            ]
-          }
-        ]
-      },
-      "assignAssessment": {
-        "isInProgress": true,
-        "isExpired": false,
-        "results": [
-          {
-            "profileId": 1253,
-            "handedIn": false,
-            "assignmentId": "8d6221d5-3910-4a49-a025-15ac18984ea7",
-            "correct": [],
-            "incorrect": [],
-            "notAttempted": [
-              "Girl0117",
-              "Girl0118",
-              "Girl0119",
-              "Girl0120",
-              "Girl0121",
-              "Girl0122"
-            ]
-          },
-          {
-            "profileId": 1254,
-            "handedIn": false,
-            "assignmentId": "10bb47a0-736e-4e5f-94e7-d91b5b33f807",
-            "correct": [],
-            "incorrect": [],
-            "notAttempted": [
-              "Girl0117",
-              "Girl0118",
-              "Girl0119",
-              "Girl0120",
-              "Girl0121"
-            ]
-          },
-          {
-            "profileId": 1255,
-            "handedIn": false,
-            "assignmentId": "e573c953-df69-4e50-b007-9645a8cee20f",
-            "correct": [],
-            "incorrect": [],
-            "notAttempted": [
-              "Girl0117",
-              "Girl0118",
-              "Girl0119",
-              "Girl0120",
-              "Girl0121"
-            ]
-          }
-        ]
       }
     },
-    "va": {
-      "allAssessments": {},
-      "classrooms": [],
-      "oneAssessment": {},
-      "getAssignments": {},
-      "assignAssessment": {}
-    },
     "sb": {
-      "allAssessments": {},
-      "classrooms": [],
-      "oneAssessment": {},
-      "getAssignments": {},
-      "assignAssessment": {}
+      "learningTime": {},
+      "loginGoals": {},
+      "studentGoals": {}
     }
   }
 }

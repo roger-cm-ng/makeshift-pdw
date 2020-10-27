@@ -6,27 +6,17 @@ import {
 } from './editor-actions';
 
 const initialState = {
-  allAssessments: {
+  learningTime: {
     local: {},
     server: null,
     isLocalValid: true
   },
-  classrooms: {
+  loginGoals: {
     local: {},
     server: null,
     isLocalValid: true
   },
-  oneAssessment: {
-    local: {},
-    server: null,
-    isLocalValid: true
-  },
-  getAssignments: {
-    local: {},
-    server: null,
-    isLocalValid: true
-  },
-  assignAssessment: {
+  studentGoals: {
     local: {},
     server: null,
     isLocalValid: true

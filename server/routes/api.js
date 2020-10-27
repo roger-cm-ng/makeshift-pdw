@@ -13,7 +13,7 @@ const Api = express.Router();
 
 Api.use(cors());
 
-const members = ['er', 'sm', 'gt', 'ra', 'ie', 'rn', 'va', 'sb'];
+const members = ['er', 'gt', 'ra', 'ie', 'rn', 'sb'];
 
 const getValueFromReferer = (refererUrl, key) => {
   const queryParams = refererUrl;
@@ -49,34 +49,22 @@ Api.post('/set-default', (req, res) => {
   res.status(200).json(memberKey.get(endPointKey).value());
 });
 
-Api.get('/assessments', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi');
+Api.get('/learningTime/productId/:productId/studentId/:studentId', (req, res) => {
+  const member = getValueFromReferer(req.headers.referer, 'nobushi') || 'rn';
 
-  res.status(200).json(db.get('members').get(member).get('allAssessments').value());
+  res.status(200).json(db.get('members').get(member).get('learningTime').value());
 });
 
-Api.get('/classrooms', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi');
+Api.get('/loginGoals/productId/:productId/studentId/:studentId', (req, res) => {
+  const member = getValueFromReferer(req.headers.referer, 'nobushi') || 'rn';
 
-  res.status(200).json(db.get('members').get(member).get('classrooms').value());
+  res.status(200).json(db.get('members').get(member).get('loginGoals').value());
 });
 
-Api.get('/assessments/:id/versions/:version', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi');
+Api.get('/studentGoals/productId/:productId/studentId/:studentId/currentWeek/:currentWeek', (req, res) => {
+  const member = getValueFromReferer(req.headers.referer, 'nobushi') || 'rn';
 
-  res.status(200).json(db.get('members').get(member).get('oneAssessment').value());
-});
-
-Api.post('/getAssignments', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi');
-
-  res.status(200).json(db.get('members').get(member).get('getAssignments').value());
-});
-
-Api.post('/assignAssessment', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi');
-
-  res.status(200).json(db.get('members').get(member).get('assignAssessment').value());
+  res.status(200).json(db.get('members').get(member).get('studentGoals').value());
 });
 
 export default Api;
