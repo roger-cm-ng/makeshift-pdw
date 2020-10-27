@@ -71,7 +71,10 @@
       "studentGoals": {}
     },
     "ra": {
-      "learningTime": {},
+      "learningTime": {
+        "time": 600,
+        "goal": 1800
+      },
       "loginGoals": {},
       "studentGoals": {}
     },
@@ -82,8 +85,8 @@
     },
     "rn": {
       "learningTime": {
-        "time": 6000,
-        "goal": 18000
+        "time": 6001,
+        "goal": 18001
       },
       "loginGoals": {
         "week": [

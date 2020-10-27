@@ -50,19 +50,19 @@ Api.post('/set-default', (req, res) => {
 });
 
 Api.get('/learningTime/productId/:productId/studentId/:studentId', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi') || 'rn';
+  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi') || 'rn';
 
   res.status(200).json(db.get('members').get(member).get('learningTime').value());
 });
 
 Api.get('/loginGoals/productId/:productId/studentId/:studentId', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi') || 'rn';
+  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi') || 'rn';
 
   res.status(200).json(db.get('members').get(member).get('loginGoals').value());
 });
 
 Api.get('/studentGoals/productId/:productId/studentId/:studentId/currentWeek/:currentWeek', (req, res) => {
-  const member = getValueFromReferer(req.headers.referer, 'nobushi') || 'rn';
+  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi') || 'rn';
 
   res.status(200).json(db.get('members').get(member).get('studentGoals').value());
 });
