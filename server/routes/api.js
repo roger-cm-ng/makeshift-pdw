@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import queryString from 'querystring';
 
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
@@ -14,17 +13,6 @@ const Api = express.Router();
 Api.use(cors());
 
 const members = ['er', 'gt', 'ra', 'ie', 'rn', 'sb'];
-
-const getValueFromReferer = (refererUrl, key) => {
-  let member = 'rn';
-  if (refererUrl) {
-    const queryParams = refererUrl;
-    const query = queryParams.replace('?', '&');
-    const params = queryString.parse(query);
-    member = params[key];
-  }
-  return member;
-};
 
 Api.get('/members', (req, res) => {
   res.status(200).json(members);
@@ -54,20 +42,17 @@ Api.post('/set-default', (req, res) => {
 });
 
 Api.get('/learningTime/productId/:productId/studentId/:studentId', (req, res) => {
-  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi');
-
+  const member = req.params.studentId;
   res.status(200).json(db.get('members').get(member).get('learningTime').value());
 });
 
 Api.get('/loginGoals/productId/:productId/studentId/:studentId', (req, res) => {
-  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi');
-
+  const member = req.params.studentId;
   res.status(200).json(db.get('members').get(member).get('loginGoals').value());
 });
 
 Api.get('/studentGoals/productId/:productId/studentId/:studentId/currentWeek/:currentWeek', (req, res) => {
-  const member = getValueFromReferer(req.headers.referrerparams, 'nobushi');
-
+  const member = req.params.studentId;
   res.status(200).json(db.get('members').get(member).get('studentGoals').value());
 });
 
