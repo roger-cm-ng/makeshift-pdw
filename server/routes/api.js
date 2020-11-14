@@ -12,7 +12,7 @@ const Api = express.Router();
 
 Api.use(cors());
 
-const members = ['er', 'gt', 'ra', 'ie', 'rn', 'sb'];
+const members = ['er', 'gt', 'ra', 'ie', 'rn', 'sb', 'ez'];
 
 Api.get('/members', (req, res) => {
   res.status(200).json(members);
@@ -51,9 +51,20 @@ Api.get('/loginGoals/productId/:productId/studentId/:studentId', (req, res) => {
   res.status(200).json(db.get('members').get(member).get('loginGoals').value());
 });
 
-Api.get('/studentGoals/productId/:productId/studentId/:studentId/currentWeek/:currentWeek', (req, res) => {
-  const member = req.params.studentId;
-  res.status(200).json(db.get('members').get(member).get('studentGoals').value());
+Api.get('/studentGoals/:timeFrame/productId/:productId/studentId/:studentId', (req, res) => {
+  const { studentId, timeFrame } = req.params;
+  const { currentWeek } = req.query;
+  const timeFrameTitleCase = timeFrame.charAt(0).toUpperCase() + timeFrame.slice(1);
+  console.log(timeFrameTitleCase, currentWeek);
+  res.status(200).json(db.get('members').get(studentId).get(`studentGoals${timeFrameTitleCase}`).value());
+});
+
+Api.post('/studentGoals/:timeFrame/productId/:productId/studentId/:studentId', (req, res) => {
+  const { studentId, timeFrame } = req.params;
+  const { currentWeek } = req.query;
+  const timeFrameTitleCase = timeFrame.charAt(0).toUpperCase() + timeFrame.slice(1);
+  console.log(timeFrameTitleCase, currentWeek, req.body);
+  res.status(200).json(db.get('members').get(studentId).get(`studentGoals${timeFrameTitleCase}`).value());
 });
 
 export default Api;

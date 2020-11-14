@@ -21,8 +21,12 @@ const Main = () => {
       endPointKey: 'loginGoals'
     },
     {
-      title: 'GET /studentGoals/productId/{productId}/studentId/{studentId}/currentWeek/{currentWeek}',
-      endPointKey: 'studentGoals'
+      title: 'GET /studentGoals/weekly/productId/{productId}/studentId/{studentId}?currentWeek={currentWeek}',
+      endPointKey: 'studentGoalsWeekly'
+    },
+    {
+      title: 'GET /studentGoals/monthly/productId/{productId}/studentId/{studentId}',
+      endPointKey: 'studentGoalsMonthly'
     }
   ];
 

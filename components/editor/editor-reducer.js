@@ -16,7 +16,12 @@ const initialState = {
     server: null,
     isLocalValid: true
   },
-  studentGoals: {
+  studentGoalsWeekly: {
+    local: {},
+    server: null,
+    isLocalValid: true
+  },
+  studentGoalsMonthly: {
     local: {},
     server: null,
     isLocalValid: true

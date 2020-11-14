@@ -18,42 +18,40 @@
       "login": 2,
       "goal": 4
     },
-    "studentGoals": {
-      "week": {
-        "time": 105,
-        "goal": 180,
-        "maxBar": 30,
-        "overTime": [
-          5,
-          8,
-          10,
-          15,
-          20,
-          22,
-          25
-        ],
-        "currentWeek": 48,
-        "currentYear": 2020
-      },
-      "month": {
-        "time": 380,
-        "goal": 720,
-        "maxBar": 480,
-        "overTime": [
-          60,
-          40,
-          20,
-          15,
-          15,
-          20,
-          10,
-          20,
-          40,
-          20,
-          50,
-          70
-        ]
-      }
+    "studentGoalsWeekly": {
+      "time": 105,
+      "goal": 180,
+      "maxBar": 30,
+      "overTime": [
+        5,
+        8,
+        10,
+        15,
+        20,
+        22,
+        25
+      ],
+      "currentWeek": 48,
+      "currentYear": 2020
+    },
+    "studentGoalsMonthly": {
+      "time": 380,
+      "goal": 720,
+      "maxBar": 480,
+      "overTime": [
+        60,
+        40,
+        20,
+        15,
+        15,
+        20,
+        10,
+        20,
+        40,
+        20,
+        50,
+        70
+      ]
     }
   },
   "members": {
@@ -63,12 +61,14 @@
         "goal": 180
       },
       "loginGoals": {},
-      "studentGoals": {}
+      "studentGoalsWeekly": {},
+      "studentGoalsMonthly": {}
     },
     "gt": {
       "learningTime": {},
       "loginGoals": {},
-      "studentGoals": {}
+      "studentGoalsWeekly": {},
+      "studentGoalsMonthly": {}
     },
     "ra": {
       "learningTime": {
@@ -76,12 +76,14 @@
         "goal": 1800
       },
       "loginGoals": {},
-      "studentGoals": {}
+      "studentGoalsWeekly": {},
+      "studentGoalsMonthly": {}
     },
     "ie": {
       "learningTime": {},
       "loginGoals": {},
-      "studentGoals": {}
+      "studentGoalsWeekly": {},
+      "studentGoalsMonthly": {}
     },
     "rn": {
       "learningTime": {
@@ -102,48 +104,53 @@
         "login": 2,
         "goal": 4
       },
-      "studentGoals": {
-        "week": {
-          "time": 105,
-          "goal": 180,
-          "maxBar": 30,
-          "overTime": [
-            5,
-            8,
-            10,
-            15,
-            20,
-            22,
-            25
-          ],
-          "currentWeek": 48,
-          "currentYear": 2020
-        },
-        "month": {
-          "time": 380,
-          "goal": 720,
-          "maxBar": 480,
-          "overTime": [
-            60,
-            40,
-            20,
-            15,
-            15,
-            20,
-            10,
-            20,
-            40,
-            20,
-            50,
-            70
-          ]
-        }
+      "studentGoalsWeekly": {
+        "time": 105,
+        "goal": 180,
+        "maxBar": 30,
+        "overTime": [
+          5,
+          8,
+          10,
+          15,
+          20,
+          22,
+          25
+        ],
+        "currentWeek": 48,
+        "currentYear": 2020
+      },
+      "studentGoalsMonthly": {
+        "time": 380,
+        "goal": 720,
+        "maxBar": 480,
+        "overTime": [
+          60,
+          40,
+          20,
+          15,
+          15,
+          20,
+          10,
+          20,
+          40,
+          20,
+          50,
+          70
+        ]
       }
     },
     "sb": {
       "learningTime": {},
       "loginGoals": {},
-      "studentGoals": {}
+      "studentGoalsWeekly": {},
+      "studentGoalsMonthly": {}
+    },
+    "ez": {
+      "learningTime": {},
+      "loginGoals": {},
+      "studentGoalsWeekly": {},
+      "studentGoalsMonthly": {}
     }
   }
 }
